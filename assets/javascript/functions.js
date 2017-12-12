@@ -1,4 +1,10 @@
 function drawMainPage() {
+	$("#mainDiv").html(
+		'<div col="row">'
+			+ '<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="bodyLogo"></div>'
+			+ '<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" id="headerText"><h1>Create your own trading cards!</h1></div>'
+		+ '</div>'
+	);
 	// col-lg-3 col-md-3 col-sm-12 col-xs-12 Add Logo
 	// col-lg-9 col-md-9 col-sm-12 col-xs-12 "Create your own trading cards!"
 	// row
