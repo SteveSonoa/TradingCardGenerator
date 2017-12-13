@@ -81,17 +81,21 @@ function displayStories(storyDiv) {
 	var myLocation = "#" + storyDiv;
 	$(myLocation).append(
 	+	'<div col="row">'
-	+		'<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="mainText">'
+	+		'<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="storyImage"></div>'
+	+		'<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" id="storyContent">'
+	+			'<div class="container-float">'
+	+				'<div class="row">'
+	+					'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="storyHeadline></div>'
+	+					'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="storyDate></div>'
+	+					'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="storyBlurb></div>'
+	+				'</div>'
+	+			'</div>'
 	+		'</div>'
-	+		'<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="bodyLogo"></div>'
+	+	'</div>'
+	+	'<div col="row">'
+	+		'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="storyDivider></div>'
 	+	'</div>'
 	);
-	// load stories (limit 10)
-		// images(float: left)
-		// headline
-		// summary
-		// Read on ESPN.com...
-		// Divider
 }
 
 function testing(){
