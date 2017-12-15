@@ -151,3 +151,9 @@ function testing(){
   //   }).catch(function(error) {
   //    An error happened.
   //   });
+
+  //JP
+	//based on user validation
+	//input in search bar (use charSearch varibale)
+	//
+	
