@@ -1,3 +1,5 @@
+
+
 // Creates the layout of the Main Page when a user first accesses the site
 function drawMainPage(introDiv) {
 	var myLocation = "#" + introDiv;
@@ -37,8 +39,8 @@ function searchForPlayer(searchDiv) {
 	+			'<label for="playerSearch">Search for an NBA player</label>'
 	+		'</div>'
 	+		'<div class="input-group">'
-	+			'<input type="text" class="form-control longWidth" id="playerSearch" placeholder="Player Name">'
-	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default">Submit</button></span>'
+	+			'<input type="text" class="form-control longWidth" id="playerSearch" name="merp" placeholder="Player Name">'
+	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default" id="submitBtn">Submit</button></span>'
 	+		'</div>'
 	+	'</form>'
 	);
@@ -101,6 +103,19 @@ function displayStories(storyDiv) {
 function testing(){
 	
 }
+$(document).ready(function() {	
+	// ajax call to starwars api
+	$("#submitBtn").on("click", function(e) {
+		// e.preventDefault(); //stops it from reloading the page
+		var starPlayer = $("input[name='merp']").val().trim();
+		// console.log(starPlayer);
+		// console.log(e);
+
+		console.log('this is the one I want => if I am blank kill me', starPlayer);
+	});
+
+})
+
 
 // Function for new user login - steps
  // Button for adding login info
@@ -155,5 +170,6 @@ function testing(){
   //JP
 	//based on user validation
 	//input in search bar (use charSearch varibale)
+	//pull data, name, affiliation and short bio
 	//
 	
