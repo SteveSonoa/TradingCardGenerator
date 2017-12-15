@@ -46,7 +46,7 @@
 }
 
 #FutureFrontName {
-	top: 80%;
+	bottom: 5%;
 	left: 25.5%;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
@@ -57,9 +57,9 @@
 }
 
 #FutureFrontIcon {
-	top: 5%;
-	left: 77%;
-	width: 7%;
+	top: 2.5%;
+	right: 15%;
+	width: 8%;
 }
 
 #CollegeBackName {
@@ -145,7 +145,7 @@
 }
 
 #FutureBackName {
-	top: 54%;
+	top: 55%;
 	left: 25.5%;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
@@ -156,7 +156,7 @@
 }
 
 #FutureBackBio {
-	top: 69.5%;
+	bottom: 11%;
 	left: 15%;
 	width: 70%;
 	text-align: justify;
@@ -167,7 +167,7 @@
 }
 
 #FutureBackAffiliation {
-	bottom: 4%;
+	bottom: 1%;
 	left: 25%;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
@@ -177,15 +177,15 @@
 }
 
 #FutureBackIcon {
-	top: 68%;
+	bottom: 9%;
 	left: 37.5%;
-	width: 25%;
+	width: 28%;
 	opacity: 0.33;
 }
 
 #FutureBackImage {
-	top: 13%;
-	left: 33.5%;
-	width: 34%;
+	top: 11.5%;
+	left: 31.5%;
+	width: 37%;
 	background-color: #ffffff;
 }
