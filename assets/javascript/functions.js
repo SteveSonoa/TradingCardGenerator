@@ -103,6 +103,46 @@ function testing(){
 }
 
 <<<<<<< HEAD
+function storeData(){ 
+// Firebase watcher + initial loader  .on("value")
+    database.ref().on("value", function(snapshot) {
+
+      // Log everything that's coming out of snapshot
+      console.log(snapshot.val());
+      console.log(snapshot.val().characterSearch);
+      console.log(snapshot.val().characterImageUrl);
+      console.log(snapshot.val().cardTemplate);
+      console.log(snapshot.val().characterStatsA);
+      console.log(snapshot.val().characterStatsB);
+      console.log(snapshot.val().characterStatsC);
+      console.log(snapshot.val().characterStatsD);
+      console.log(snapshot.val().characterStatsE);
+
+      // Change the HTML to reflect
+      $("#characterSearch-display").text(snapshot.val().characterSearch);
+      $("#characterImageUrl-display").text(snapshot.val().characterImageUrl);
+      $("#cardTemplate-display").text(snapshot.val().cardTemplate);
+      $("#cardStatsA-display").text(snapshot.val().characterStatsA);
+      $("#cardStatsB-display").text(snapshot.val().characterStatsB);
+      $("#cardStatsC-display").text(snapshot.val().characterStatsC);
+      $("#cardStatsD-display").text(snapshot.val().characterStatsD);
+      $("#cardStatsE-display").text(snapshot.val().characterStatsE);
+      
+
+      // Handle the errors
+    }, function(errorObject) {
+      console.log("Errors handled: " + errorObject.code);
+    });
+
+
+
+
+}
+
+
+    
+=======
+<<<<<<< HEAD
 function storeData(){
 firebase.initializeApp(config);
 
@@ -241,3 +281,4 @@ function displayThTable(divName) {
 	$(myLocation).append('</div>');
 }
 >>>>>>> 99c1adce2a600ef931dbc9b87a4c7cfd742fc681
+>>>>>>> 05f79141715e4ea8d631fc7767de9669fcf0170b
