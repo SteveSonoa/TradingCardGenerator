@@ -38,7 +38,7 @@ function searchForCharacter(searchDiv) {
 	+		'</div>'
 	+		'<div class="input-group">'
 	+			'<input type="text" class="form-control longWidth" id="characterSearch" placeholder="Character Name">'
-	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default">Submit</button></span>'
+	+			'<span class="input-group-btn"><button type="submit" id="submitBtn" class="btn btn-default">Submit</button></span>'
 	+		'</div>'
 	+	'</form>'
 	);

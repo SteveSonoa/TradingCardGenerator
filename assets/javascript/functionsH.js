@@ -1,8 +1,8 @@
 function storeData(){
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 
  
- var database = firebase.database();
+//  var database = firebase.database();
 
    // Capture Button Click and create new user with the name in the database
    $(".btn").on("click", function(event) {
