@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -28,19 +29,32 @@
 	<!-- Load local files -->
 	<link rel="stylesheet" type="text/css" href="assets/css/drawCards.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	<!-- Link to JavaScript CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 	<script src="assets/javascript/vars.js"></script>
 	<script src="assets/javascript/functions.js"></script>
 	<script src="assets/javascript/functionsDrawCards.js"></script>
 	<script src="assets/javascript/app.js"></script>
 
-	<title></title>
+	<title>Star Wars Trading Cards</title>
+
 </head>
+
 <body>
 	<div class="container" id="mainDiv"></div>
 
+	<div id="button-area"></div>
+	<div id="form-area">Placeholder area to place form for user input!
+	</div>
+	<div id="giphy-area">Placeholder area to display Giphy API images!
+	</div>
+	
 	<script type="text/javascript">
 	  drawMainPage("mainDiv");
 	</script>
+	<script src="assets/javascript/image-logic.js"></script>
 
 </body>
 </html>
