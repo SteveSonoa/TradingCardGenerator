@@ -108,24 +108,44 @@ function testing(){
 $(document).ready(function() {	
 	// ajax call to starwars api
 	$("#submitBtn").on("click", function(e) {
-		// e.preventDefault(); //stops it from reloading the page
+	 	e.preventDefault(); //stops it from reloading the page
 		var starPlayer = $("input[name='merp']").val().trim();
-		// console.log(starPlayer);
+		$("input").val("");
+		console.log("Star Player:",starPlayer);
 		// console.log(e);
+		var swApi = "https://swapi.co/api/people/?search=" + starPlayer;
+		console.log("SwAPI URL:", swApi);
+		$.ajax({
+			url: swApi,
+			method: 'GET'
+		  }).done(function(response) {
+			console.log(response);
 
+			var results = response.results;
+
+			var firstCharacter = results[0];
+
+
+		  });
 		console.log('this is the one I want => if I am blank kill me', starPlayer);
 	});
 
 })
 
-var swApi = "https://swapi.co/api/people/";
 
-$.ajax({
-	url: swApi,
-	method: 'GET'
-  }).done(function(response) {
-	console.log(response);
-  });
+
+//   // After the data from the AJAX request comes back
+//   .done(function(response) {
+// 	// Saving the image_original_url property
+// 	var people = response.data.image_original_url;
+// 	// Creating and storing an image tag
+// 	var catImage = $("<img>");
+// 	// Setting the catImage src attribute to imageUrl
+// 	catImage.attr("src", imageUrl);
+// 	catImage.attr("alt", "cat image");
+// 	// Prepending the catImage to the images div
+// 	$("#images").prepend(catImage);
+//   });
 
 
 // Function for new user login - steps
