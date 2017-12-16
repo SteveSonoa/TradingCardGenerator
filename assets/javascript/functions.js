@@ -21,6 +21,7 @@ function drawMainPage(introDiv) {
 	);
 	drawLogo("bodyLogo");
 	searchForCharacter("characterSearch");
+	storeData();
 }
 
 // Draws the company logo in any div on the site, automatically scaling to the available space
