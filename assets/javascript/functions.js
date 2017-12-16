@@ -122,6 +122,7 @@ $(document).ready(function() {
 })
 
 
+<<<<<<< HEAD
 // Function for new user login - steps
  // Button for adding login info
  // Grab user input
@@ -178,3 +179,5 @@ $(document).ready(function() {
 	//pull data, name, affiliation and short bio
 	//
 	
+=======
+>>>>>>> 34cac7283cc4e8e03431caf156352f14fd31846f

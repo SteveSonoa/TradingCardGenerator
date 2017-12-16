@@ -9,6 +9,10 @@ var config = {
 };
 firebase.initializeApp(config);
 
+<<<<<<< HEAD
 
 
 
+=======
+ 
+>>>>>>> 34cac7283cc4e8e03431caf156352f14fd31846f
