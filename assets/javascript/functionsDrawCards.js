@@ -1,7 +1,7 @@
 function drawCollegeFront(divName) {
 	var myLocation = "#" + divName;
 	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
 	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateCollegeFront.png" height="400" width="285" />'
 	+				'<div class="templateElements" id="CollegeFrontIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
@@ -15,7 +15,7 @@ function drawCollegeFront(divName) {
 function drawCollegeBack(divName) {
 	var myLocation = "#" + divName;
 	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
 	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateCollegeBack.png" height="400" width="285" />'
 	+				'<div class="templateElements" id="CollegeBackIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
@@ -32,7 +32,7 @@ function drawCollegeBack(divName) {
 function drawSimpleFront(divName) {
 	var myLocation = "#" + divName;
 	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
 	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateSimpleFront.png" height="400" width="285" />'
 	+				'<div class="templateElements" id="SimpleFrontIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
@@ -46,7 +46,7 @@ function drawSimpleFront(divName) {
 function drawSimpleBack(divName) {
 	var myLocation = "#" + divName;
 	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
 	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateSimpleBack.png" height="400" width="285" />'
 	+				'<div class="templateElements" id="SimpleBackIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
@@ -63,7 +63,7 @@ function drawSimpleBack(divName) {
 function drawFutureFront(divName) {
 	var myLocation = "#" + divName;
 	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
 	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateFutureFront.png" height="400" width="285" />'
 	+				'<div class="templateElements" id="FutureFrontIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
@@ -77,7 +77,7 @@ function drawFutureFront(divName) {
 function drawFutureBack(divName) {
 	var myLocation = "#" + divName;
 	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
 	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateFutureBack.png" height="400" width="285" />'
 	+				'<div class="templateElements" id="FutureBackIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
