@@ -7,11 +7,11 @@ function drawMainPage(introDiv) {
 	+	'<div col="row">'
 	+		'<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="mainText">'
 	+			'<div><h1 class="text-center">Create your own</h1></div>'
-	+			'<div><h1 class="text-center">CUSTOMIZED</h1></div>'
-	+			'<div><h1 class="text-center">Basketball Cards!</h1></div>'
+	+			'<div><h1 class="text-center">STAR WARS</h1></div>'
+	+			'<div><h1 class="text-center">Trading Cards!</h1></div>'
 	+			'<div class="container-float">'
 	+				'<div class="row">'
-	+					'<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="playerSearch"></div>'
+	+					'<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="characterSearch"></div>'
 	+					'<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">'
 	+						'<p>Login</p>'
 	+					'</div>'
@@ -22,7 +22,7 @@ function drawMainPage(introDiv) {
 	+	'</div>'
 	);
 	drawLogo("bodyLogo");
-	searchForPlayer("playerSearch");
+	searchForCharacter("characterSearch");
 }
 
 // Draws the company logo in any div on the site, automatically scaling to the available space
@@ -31,22 +31,27 @@ function drawLogo(logoDiv) {
 	$(myLocation).html('<img src="assets/images/logo.png" alt="Artificial Rag Gnomes" class="img img-responsive" />');
 }
 
-function searchForPlayer(searchDiv) {
+function searchForCharacter(searchDiv) {
 	var myLocation = "#" + searchDiv;
 	$(myLocation).html(
 		'<form class="form-inline">'
 	+		'<div>'	
-	+			'<label for="playerSearch">Search for an NBA player</label>'
+	+			'<label for="characterSearch">Search for an Star Wars character</label>'
 	+		'</div>'
 	+		'<div class="input-group">'
+<<<<<<< HEAD
 	+			'<input type="text" class="form-control longWidth" id="playerSearch" name="merp" placeholder="Player Name">'
 	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default" id="submitBtn">Submit</button></span>'
+=======
+	+			'<input type="text" class="form-control longWidth" id="characterSearch" placeholder="Character Name">'
+	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default">Submit</button></span>'
+>>>>>>> 4f6cca058ad7d2982ddf61938b045576a3e111e3
 	+		'</div>'
 	+	'</form>'
 	);
 }
 
-// Draw the card collections available to the player, including the ability to flip it over from front to back
+// Draw the card collections available to the character, including the ability to flip it over from front to back
 function displayFinishedCards(libraryDiv) {
 	var myLocation = "#" + libraryDiv;
 	$(myLocation).html(
@@ -78,7 +83,7 @@ function displayFocusCard(mainCardDiv) {
 		// flip to open back of image
 }
 
-// Load news stories about the player & his team
+// Load news stories about the character & his team
 function displayStories(storyDiv) {
 	var myLocation = "#" + storyDiv;
 	$(myLocation).append(

@@ -1,0 +1,191 @@
+#templateArea {
+	width: 285px;
+	height: 400px;
+	background-color: #00FF00;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+
+#templateImage {
+	position: relative;
+	z-index: 1;
+}
+
+.templateElements {
+	position: absolute;
+	z-index: 2;
+}
+
+#CollegeFrontName {
+	top: 7%;
+	left: 31%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+#CollegeFrontIcon {
+	top: 3%;
+	left: 9%;
+	width: 20%;
+}
+
+#SimpleFrontName {
+	top: 10%;
+	left: 43%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+	font-weight: bold;
+}
+
+#SimpleFrontIcon {
+	top: 6%;
+	left: 13.5%;
+	width: 28%;
+}
+
+#FutureFrontName {
+	top: 80%;
+	left: 25.5%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: bolder;
+	text-align: center;
+	max-width: 50%;
+}
+
+#FutureFrontIcon {
+	top: 5%;
+	left: 77%;
+	width: 7%;
+}
+
+#CollegeBackName {
+	top: 7%;
+	left: 31%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+#CollegeBackBio {
+	top: 33%;
+	left: 10%;
+	width: 80%;
+	text-align: justify;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+#CollegeBackAffiliation {
+	bottom: 2%;
+	left: 30%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #ffffff;
+}
+
+#CollegeBackIcon {
+	bottom: 2%;
+	left: 9%;
+	width: 20%;
+}
+
+#CollegeBackImage {
+	top: 2%;
+	left: 7.5%;
+	width: 22%;
+}
+
+#SimpleBackName {
+	top: 58%;
+	left: 10%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+	font-weight: bolder;
+	width: 81%;
+	text-align: center;
+}
+
+#SimpleBackBio {
+	top: 69%;
+	left: 10%;
+	width: 81%;
+	text-align: justify;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #ffffff;
+}
+
+#SimpleBackAffiliation {
+	top: 35%;
+	right: 10%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: #ffffff;
+	width: 33%;
+	text-align: center;
+}
+
+#SimpleBackIcon {
+	top: 8%;
+	right: 10%;
+	width: 33%;
+}
+
+#SimpleBackImage {
+	top: 6%;
+	left: 12%;
+	width: 36.5%;
+	background-color: #ffffff;
+}
+
+#FutureBackName {
+	top: 54%;
+	left: 25.5%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: #ffffff;
+	font-weight: bolder;
+	text-align: center;
+	max-width: 50%;
+}
+
+#FutureBackBio {
+	top: 69.5%;
+	left: 15%;
+	width: 70%;
+	text-align: justify;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #000000;
+	z-index: 3;
+}
+
+#FutureBackAffiliation {
+	bottom: 4%;
+	left: 25%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 20px;
+	color: #ffffff;
+	width: 50%;
+	text-align: center;
+}
+
+#FutureBackIcon {
+	top: 68%;
+	left: 37.5%;
+	width: 25%;
+	opacity: 0.33;
+}
+
+#FutureBackImage {
+	top: 13%;
+	left: 33.5%;
+	width: 34%;
+	background-color: #ffffff;
+}
