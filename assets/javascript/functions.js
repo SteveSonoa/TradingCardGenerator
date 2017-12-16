@@ -39,13 +39,10 @@ function searchForCharacter(searchDiv) {
 	+			'<label for="characterSearch">Search for an Star Wars character</label>'
 	+		'</div>'
 	+		'<div class="input-group">'
-<<<<<<< HEAD
 	+			'<input type="text" class="form-control longWidth" id="playerSearch" name="merp" placeholder="Player Name">'
 	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default" id="submitBtn">Submit</button></span>'
-=======
 	+			'<input type="text" class="form-control longWidth" id="characterSearch" placeholder="Character Name">'
 	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default">Submit</button></span>'
->>>>>>> 4f6cca058ad7d2982ddf61938b045576a3e111e3
 	+		'</div>'
 	+	'</form>'
 	);
@@ -111,18 +108,46 @@ function testing(){
 $(document).ready(function() {	
 	// ajax call to starwars api
 	$("#submitBtn").on("click", function(e) {
-		// e.preventDefault(); //stops it from reloading the page
+	 	e.preventDefault(); //stops it from reloading the page
 		var starPlayer = $("input[name='merp']").val().trim();
-		// console.log(starPlayer);
+		$("input").val("");
+		console.log("Star Player:",starPlayer);
 		// console.log(e);
+		var swApi = "https://swapi.co/api/people/?search=" + starPlayer;
+		console.log("SwAPI URL:", swApi);
+		$.ajax({
+			url: swApi,
+			method: 'GET'
+		  }).done(function(response) {
+			console.log(response);
 
+			var results = response.results;
+
+			var firstCharacter = results[0];
+
+
+		  });
 		console.log('this is the one I want => if I am blank kill me', starPlayer);
 	});
 
 })
 
 
-<<<<<<< HEAD
+
+//   // After the data from the AJAX request comes back
+//   .done(function(response) {
+// 	// Saving the image_original_url property
+// 	var people = response.data.image_original_url;
+// 	// Creating and storing an image tag
+// 	var catImage = $("<img>");
+// 	// Setting the catImage src attribute to imageUrl
+// 	catImage.attr("src", imageUrl);
+// 	catImage.attr("alt", "cat image");
+// 	// Prepending the catImage to the images div
+// 	$("#images").prepend(catImage);
+//   });
+
+
 // Function for new user login - steps
  // Button for adding login info
  // Grab user input
@@ -179,5 +204,3 @@ $(document).ready(function() {
 	//pull data, name, affiliation and short bio
 	//
 	
-=======
->>>>>>> 34cac7283cc4e8e03431caf156352f14fd31846f
