@@ -7,10 +7,3 @@
     storageBucket: "trading-card-maker.appspot.com",
     messagingSenderId: "880032759002"
   };
-<<<<<<< HEAD
-  firebase.initializeApp(config);
-=======
-  
->>>>>>> 05f79141715e4ea8d631fc7767de9669fcf0170b
-
- 
