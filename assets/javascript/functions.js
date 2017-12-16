@@ -127,20 +127,10 @@ firebase.initializeApp(config);
       };
 
       database.ref().push(character);
-       
-
-      //    database.ref().on("value", function(snapshot) {
-
+     
       // Log everything that's coming out of snapshot
       console.log(character.characterName);
-      // console.log(newUser.characterImageUrl);
-      // console.log(newUser.cardTemplate);
-      // console.log(newUser.characterStatsA);
-      // console.log(newUser.characterStatsB);
-      // console.log(newUser.characterStatsC);
-      // console.log(newUser.characterStatsD);
-      // console.log(newUser.characterStatsE);
-      
+            
       // clear all of the input boxes
       $("#characterSearch").val("");
     });
@@ -154,7 +144,7 @@ firebase.initializeApp(config);
 	      event.preventDefault();
 	      //Get user input
 	     // Assumed that we have image with "characterName" and "imageURL" attributes
-		// When image is clicked, we use the "charaterName" attribute to find our character
+		// When image is clicked, we use the "characterName" attribute to find our character
 		// Use the "imageURL" attribute to update our found character
 
 		var characterName = $(this).attr("characterName");
