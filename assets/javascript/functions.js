@@ -3,7 +3,7 @@ function drawMainPage(introDiv) {
 	var myLocation = "#" + introDiv;
 	$(myLocation).html(
 	+	'<div col="row">'
-	+		'<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="mainText">'
+	+		'<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" id="mainText">'
 	+			'<div><h1 class="text-center">Create your own</h1></div>'
 	+			'<div><h1 class="text-center">STAR WARS</h1></div>'
 	+			'<div><h1 class="text-center">Trading Cards!</h1></div>'
@@ -16,7 +16,7 @@ function drawMainPage(introDiv) {
 	+				'</div>'
 	+			'</div>'
 	+		'</div>' // headerText
-	+		'<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="bodyLogo"></div>'
+	+		'<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="bodyLogo"></div>'
 	+	'</div>'
 	);
 	drawLogo("bodyLogo");
@@ -102,3 +102,13 @@ function testing(){
 	
 }
 
+function displayThTable(divName) {
+	var myLocation = "#" + divName;
+	$(myLocation).html('<div class="row">');
+	for (var i = 1; i < 8; i++) {
+		$(myLocation).append(
+			'<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12" id="' + i + '">#' + i + '</div>'
+		);
+	}
+	$(myLocation).append('</div>');
+}
