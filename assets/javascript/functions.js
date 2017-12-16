@@ -21,6 +21,7 @@ function drawMainPage(introDiv) {
 	);
 	drawLogo("bodyLogo");
 	searchForCharacter("characterSearch");
+	storeData();
 }
 
 // Draws the company logo in any div on the site, automatically scaling to the available space
@@ -103,24 +104,23 @@ function testing(){
 }
 
 
-
 function storeData(){
 	firebase.initializeApp(config);
 	var database = firebase.database();
 
     // Capture Button Click and create new user with the name in the database
-    $("#addCharacterSearch").on("click", function(event) {
+    $(".btn").on("click", function(event) {
       // Don't refresh the page!
       event.preventDefault();
       //Get user input
-      var characterName = $("#characterSearch-input").val().trim();
+      var characterName = $("#characterSearch").val().trim();
       
       //create local "temporary" object for holding user input data
       var character = {
         characterName: characterName,
-        characterImageUrl: "",
-        cardTemplate: "",
-        characterStatsA: "",
+        ImageUrl: "",
+        cardTemplateURL: "",
+        swapistatsURL: "",
 
       };
 
@@ -140,7 +140,7 @@ function storeData(){
       // console.log(newUser.characterStatsE);
       
       // clear all of the input boxes
-      $("#characterSearch-input").val("");
+      $("#characterSearch").val("");
     });
     
     // When new user selects giphy image - update the image URL in database
@@ -215,6 +215,7 @@ function storeData(){
 		//Use characterName to get giphy images assume already done
 	});
 }
+
 
 function displayThTable(divName) {
 	var myLocation = "#" + divName;
