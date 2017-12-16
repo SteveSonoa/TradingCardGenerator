@@ -102,52 +102,11 @@ function testing(){
 	
 }
 
-<<<<<<< HEAD
-function storeData(){ 
-// Firebase watcher + initial loader  .on("value")
-    database.ref().on("value", function(snapshot) {
-
-      // Log everything that's coming out of snapshot
-      console.log(snapshot.val());
-      console.log(snapshot.val().characterSearch);
-      console.log(snapshot.val().characterImageUrl);
-      console.log(snapshot.val().cardTemplate);
-      console.log(snapshot.val().characterStatsA);
-      console.log(snapshot.val().characterStatsB);
-      console.log(snapshot.val().characterStatsC);
-      console.log(snapshot.val().characterStatsD);
-      console.log(snapshot.val().characterStatsE);
-
-      // Change the HTML to reflect
-      $("#characterSearch-display").text(snapshot.val().characterSearch);
-      $("#characterImageUrl-display").text(snapshot.val().characterImageUrl);
-      $("#cardTemplate-display").text(snapshot.val().cardTemplate);
-      $("#cardStatsA-display").text(snapshot.val().characterStatsA);
-      $("#cardStatsB-display").text(snapshot.val().characterStatsB);
-      $("#cardStatsC-display").text(snapshot.val().characterStatsC);
-      $("#cardStatsD-display").text(snapshot.val().characterStatsD);
-      $("#cardStatsE-display").text(snapshot.val().characterStatsE);
-      
-
-      // Handle the errors
-    }, function(errorObject) {
-      console.log("Errors handled: " + errorObject.code);
-    });
 
 
-
-
-}
-
-
-    
-=======
-<<<<<<< HEAD
 function storeData(){
-firebase.initializeApp(config);
-
-  
-  var database = firebase.database();
+	firebase.initializeApp(config);
+	var database = firebase.database();
 
     // Capture Button Click and create new user with the name in the database
     $("#addCharacterSearch").on("click", function(event) {
@@ -254,31 +213,29 @@ firebase.initializeApp(config);
 		//createImagesTempages (characterName);
 
 		//Use characterName to get giphy images assume already done
-
-
-		
-		
-
-});
-  
+	});
 }
-  
 
-
-
-
-
-   
-=======
 function displayThTable(divName) {
 	var myLocation = "#" + divName;
-	$(myLocation).html('<div class="row">');
-	for (var i = 1; i < 8; i++) {
-		$(myLocation).append(
-			'<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12" id="' + i + '">#' + i + '</div>'
+	$(myLocation).html('<div class="row" id="thGallery">');
+
+	database.ref().on("child_added", function(snapshot) {
+		var divID = Math.floor(Math.random() * 99999999999);
+
+		var charName = snapshot.val().characterName;
+		var ImageUrl = snapshot.val().ImageUrl;
+		var cardTemplateURL = snapshot.val().cardTemplateURL;
+		var swapistatsURL = snapshot.val().swapistatsURL;
+		$("#thGallery").html(
+			'<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 cardTh" id="' + divID + '"><img src="assets/images/template' + cardTemplateURL + 'Front.png" class="img img-responsive" /></div>'
 		);
-	}
+		$("#" + divID).css('background-image', 'url(' + ImageUrl + ')');
+		$("#" + divID).attr("data-characterName", charName);
+		$("#" + divID).attr("data-ImageUrl", ImageUrl);
+		$("#" + divID).attr("data-cardTemplateURL", cardTemplateURL);
+		$("#" + divID).attr("data-swapistatsURL", swapistatsURL);
+	});
+
 	$(myLocation).append('</div>');
 }
->>>>>>> 99c1adce2a600ef931dbc9b87a4c7cfd742fc681
->>>>>>> 05f79141715e4ea8d631fc7767de9669fcf0170b
