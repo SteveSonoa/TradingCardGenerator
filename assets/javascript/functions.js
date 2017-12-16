@@ -1,3 +1,5 @@
+
+
 // Creates the layout of the Main Page when a user first accesses the site
 function drawMainPage(introDiv) {
 	var myLocation = "#" + introDiv;
@@ -37,8 +39,13 @@ function searchForCharacter(searchDiv) {
 	+			'<label for="characterSearch">Search for an Star Wars character</label>'
 	+		'</div>'
 	+		'<div class="input-group">'
+<<<<<<< HEAD
+	+			'<input type="text" class="form-control longWidth" id="playerSearch" name="merp" placeholder="Player Name">'
+	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default" id="submitBtn">Submit</button></span>'
+=======
 	+			'<input type="text" class="form-control longWidth" id="characterSearch" placeholder="Character Name">'
 	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default">Submit</button></span>'
+>>>>>>> 4f6cca058ad7d2982ddf61938b045576a3e111e3
 	+		'</div>'
 	+	'</form>'
 	);
@@ -101,4 +108,76 @@ function displayStories(storyDiv) {
 function testing(){
 	
 }
+$(document).ready(function() {	
+	// ajax call to starwars api
+	$("#submitBtn").on("click", function(e) {
+		// e.preventDefault(); //stops it from reloading the page
+		var starPlayer = $("input[name='merp']").val().trim();
+		// console.log(starPlayer);
+		// console.log(e);
 
+		console.log('this is the one I want => if I am blank kill me', starPlayer);
+	});
+
+})
+
+
+<<<<<<< HEAD
+// Function for new user login - steps
+ // Button for adding login info
+ // Grab user input
+ // Creates local "temporary" object for holding login data
+ // Upload login data to the database
+ // Logs everything to console
+ // Somehow let user know they have been added
+ // Clear all of the text-boxes
+
+
+  // Create Firebase event for adding user info to the database 
+  // Store everything into a variable.
+  // Create a new account with email and pasword
+  //   Firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  //   Handle Errors here.
+  //   var errorCode = error.code;
+  //   var errorMessage = error.message;
+  
+
+
+  // when an existing user signs in - pass data to firebase
+ // Button for adding login info
+ // Grab user input
+ // Creates local "temporary" object for holding login data
+ // Upload login data to the database
+ // Logs everything to console
+ // Somehow let user know they have access
+ // Clear all of the text-boxes
+
+// Create Firebase event for checking existing user info in the database 
+  // Store everything into a variable.
+  // Create a new account with email and pasword
+  //   Firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  //   Handle Errors here.
+  //   var errorCode = error.code;
+  //   var errorMessage = error.message;
+  //   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  //   Handle Errors here.
+  //   var errorCode = error.code;
+  //   var errorMessage = error.message;
+  //   });
+  
+  
+  // Have a user sign out
+  //   firebase.auth().signOut().then(function() {
+  //   Sign-out successful.
+  //   }).catch(function(error) {
+  //    An error happened.
+  //   });
+
+  //JP
+	//based on user validation
+	//input in search bar (use charSearch varibale)
+	//pull data, name, affiliation and short bio
+	//
+	
+=======
+>>>>>>> 34cac7283cc4e8e03431caf156352f14fd31846f
