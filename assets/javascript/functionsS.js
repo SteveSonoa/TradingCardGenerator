@@ -152,12 +152,13 @@ function drawGiphy(charName) {
 				"data-ImageUrl": response.data[i].images.original.url
 			});
 
+			// innerGifDiv.css('background-image', 'url(' + response.data[i].images.original.url + ')');
+
 			var gifImg = $("<img>", {
 				"class": "img img-responsive gifImg",
 				"src": response.data[i].images.original.url,
 				"height": 400
 			});
-
 
 	      innerGifDiv.append(gifImg);
 	      gifDiv.append(innerGifDiv);
