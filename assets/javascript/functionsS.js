@@ -131,28 +131,37 @@ function drawGiphy(charName) {
 	var searchInfo = charName;
 	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + searchInfo + "&api_key=" + apiKey + "&limit=3";
 
+	$("#imageSelectDiv").html('<h1 class="text-center">Select Your Favorite Image</h1>');
+
 	// Creates AJAX call for the specific movie button being clicked
 	$.ajax({
 		url: queryURL,
 		method: "GET"
 	}).done(function(response) {
-		console.log(response.data);
+		// console.log(response.data);
 
-	// Loop for each of the returned images
-    for (var i = 0; i < response.data.length; i++) {        
-      // Create a var to hold the jQuery data
-      var gifDiv = $("<div>", {
-        class: "col-lg-4 col-md-4 col-sm-12 col-xs-12"
-      });
+		// Loop for each of the returned images
+		for (var i = 0; i < response.data.length; i++) {        
+			// Create a var to hold the jQuery data
+			var gifDiv = $("<div>", {
+				class: "col-lg-4 col-md-4 col-sm-12 col-xs-12"
+			});
 
-      var gifImg = $("<img>", {
-        "class": "img img-responsive gifImg",
-        "src": response.data[i].images.original.url,
-        "height": 400        
-      });
+			var innerGifDiv = $("<div>", {
+				class: "giphyDiv",
+				"data-ImageUrl": response.data[i].images.original.url
+			});
 
-      gifDiv.append(gifImg);
-      $("#imageSelectDiv").append(gifDiv);
-    }
+			var gifImg = $("<img>", {
+				"class": "img img-responsive gifImg",
+				"src": response.data[i].images.original.url,
+				"height": 400
+			});
+
+
+	      innerGifDiv.append(gifImg);
+	      gifDiv.append(innerGifDiv);
+	      $("#imageSelectDiv").append(gifDiv);
+	    }
 	});
 }
