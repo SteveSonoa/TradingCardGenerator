@@ -25,17 +25,15 @@ $(document).ready(function() {
     }).done(function(response) {
       console.log(response);
        //getting the characters name and storing it globally
-       characterName = results[0].name;
+       characterName = response.results[0].name;
 
       var results = response.results;
 
       var firstCharacter = results[0];
       console.log(firstCharacter);
-      imageLogic(firstCharacter);
+      drawGiphy(firstCharacter);
           });
         console.log('this is the one I want => if I am blank kill me', starPlayer);
     });
     console.log("this is the one I want => if I am blank kill me", starPlayer);
   });
-
-});
