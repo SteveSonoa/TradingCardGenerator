@@ -6,7 +6,7 @@ function storeData() {
             // Don't refresh the page!
              event.preventDefault();
 
-
+            //create an object to hold data
             var character = {
                 characterName: characterName,
                 ImageUrl: ImageUrl,
