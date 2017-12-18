@@ -163,7 +163,7 @@ function thListener() {
 function thFlipListener() {
 	$(document).on("click", "#templateArea", function(event) {
 		$("#templateImage").toggle("drop");
-		$("#templateImageBack").toggle("drop");
+		$("#templateImageBack").toggle("drop", {direction: 'right'});
 	});
 }
 
