@@ -1,24 +1,5 @@
 // Creates the layout of the Main Page when a user first accesses the site
 function drawMainPage(introDiv) {
-	var myLocation = "#" + introDiv;
-	$(myLocation).html(
-		'<div col="row">'
-	+		'<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" id="mainText">'
-	+			'<div><h1 class="text-center">Create your own</h1></div>'
-	+			'<div><h1 class="text-center">STAR WARS</h1></div>'
-	+			'<div><h1 class="text-center">Trading Cards!</h1></div>'
-	+			'<div class="container-float">'
-	+				'<div class="row">'
-	+					'<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12" id="characterSearch"></div>'
-	+					'<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">'
-	+						'<p>Login</p>'
-	+					'</div>'
-	+				'</div>'
-	+			'</div>'
-	+		'</div>' // headerText
-	+		'<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="bodyLogo"></div>'
-	+	'</div>'
-	);
 	drawLogo("bodyLogo");
 	searchForCharacter("characterSearch");
 }
