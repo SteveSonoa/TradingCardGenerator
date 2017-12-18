@@ -39,6 +39,8 @@ $(document).ready(function () {
 $('body').on('click', '.gifImg', function() {
 	var giphyUrl = $(this).attr("src");
 	console.log(giphyUrl);
+
+
 	displayTemplates();
 });
 
@@ -114,5 +116,6 @@ function displayTemplates () {
     templateDivC.append(templateDivsCB);
 
     $("#templateSelectDiv").append(templateDivC);
-
+    
+    
 };
