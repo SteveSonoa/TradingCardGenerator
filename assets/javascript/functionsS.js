@@ -3,22 +3,16 @@ function displayFinishedCards(libraryDiv) {
 	var myLocation = "#" + libraryDiv;
 	$(myLocation).html(
 		'<div col="row">'
-	+		'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="focusCardHeader"><h1>Click To Flip This Card Over</h1></div>'
+	+		'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="focusCardHeader"><h1 class="text-center">Click To Flip This Card Over</h1></div>'
 	+	'</div>'
 	+	'<div col="row">'
 	+		'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="focusCard"></div>'
 	+	'</div>'
-	+	'<div col="row">'
-	+		'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="saveOptions">Save Card Front // Save Card Back</div>'
-	+	'</div>'
+	// +	'<div col="row">'
+	// +		'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="saveOptions">Save Card Front // Save Card Back</div>'
+	// +	'</div>'
 	);
 	displayFocusCard("focusCard");
-	// if user is logged in
-		// while more images remain in user's search history
-			// col-12 My Collection
-			// col-3 thumbnail of next image
-			// click to put thumbnail in main image spot
-			// ALL images will be displayed in the thumbnail images - including the main images, even if just 1
 }
 
 // Draw the main focus card & program the flip
@@ -30,35 +24,77 @@ function displayFocusCard(mainCardDiv) {
 		// flip to open back of image
 }
 
-// Load news stories about the character & his team
-function displayStories(storyDiv) {
-	var myLocation = "#" + storyDiv;
-	$(myLocation).append(
-		'<div col="row">'
-	+		'<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="storyImage"></div>'
-	+		'<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" id="storyContent">'
-	+			'<div class="container-float">'
-	+				'<div class="row">'
-	+					'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="storyHeadline></div>'
-	+					'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="storyDate></div>'
-	+					'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="storyBlurb></div>'
-	+				'</div>'
-	+			'</div>'
-	+		'</div>'
-	+	'</div>'
-	+	'<div col="row">'
-	+		'<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="storyDivider></div>'
-	+	'</div>'
-	);
-}
+// Loads the firebase with sample content for testing purposes
+function test() {
+	var object1 = {
+		characterName: "Han Solo",
+		ImageUrl: "https://www.themarysue.com/wp-content/uploads/2017/07/han-solo-return-of-the-jedi_612x380.jpg",
+		charTemplateURL: "Future",
+		swapistatsURL: ""
+	};
 
-function testing(){
-	
+	var object2 = {
+		characterName: "Nien Nunb",
+		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/databank_niennunb_01_169_31eccf40.jpeg?region=0%2C49%2C1560%2C780",
+		charTemplateURL: "Simple",
+		swapistatsURL: ""
+	};
+	var object3 = {
+		characterName: "Leia Organa",
+		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/leia_6d2292da.jpeg?region=295%2C124%2C1434%2C806&width=320",
+		charTemplateURL: "College",
+		swapistatsURL: ""
+	};
+
+	var object4 = {
+		characterName: "Jabba The Hutt",
+		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/Jabba-The-Hutt_b5a08a70.jpeg?region=0%2C0%2C1200%2C675&width=768",
+		charTemplateURL: "Future",
+		swapistatsURL: ""
+	};
+	var object5 = {
+		characterName: "Han Solo",
+		ImageUrl: "https://www.themarysue.com/wp-content/uploads/2017/07/han-solo-return-of-the-jedi_612x380.jpg",
+		charTemplateURL: "Future",
+		swapistatsURL: ""
+	};
+
+	var object6 = {
+		characterName: "Nien Nunb",
+		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/databank_niennunb_01_169_31eccf40.jpeg?region=0%2C49%2C1560%2C780",
+		charTemplateURL: "Simple",
+		swapistatsURL: ""
+	};
+	var object7 = {
+		characterName: "Leia Organa",
+		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/leia_6d2292da.jpeg?region=295%2C124%2C1434%2C806&width=320",
+		charTemplateURL: "College",
+		swapistatsURL: ""
+	};
+
+	var object8 = {
+		characterName: "Jabba The Hutt",
+		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/Jabba-The-Hutt_b5a08a70.jpeg?region=0%2C0%2C1200%2C675&width=768",
+		charTemplateURL: "Future",
+		swapistatsURL: ""
+	};
+
+	database.ref().push(object1);
+	database.ref().push(object2);
+	database.ref().push(object3);
+	database.ref().push(object4);
+	database.ref().push(object5);
+	database.ref().push(object6);
+	database.ref().push(object7);
+	database.ref().push(object8);
 }
 
 function displayThTable(divName) {
 	var myLocation = "#" + divName;
-	$(myLocation).html('<div class="row" id="thGallery">');
+	$(myLocation).html('<div class="row"><div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"><h1 class="text-center">View A Previously Made Card</h1></div></div>');
+	$(myLocation).append('<div class="row cardTh" id="thGallery">');
+
+	var i = 1;
 
 	database.ref().on("child_added", function(snapshot) {
 		var divID = Math.floor(Math.random() * 99999999999);
@@ -67,14 +103,22 @@ function displayThTable(divName) {
 		var ImageUrl = snapshot.val().ImageUrl;
 		var cardTemplateURL = snapshot.val().cardTemplateURL;
 		var swapistatsURL = snapshot.val().swapistatsURL;
-		$("#thGallery").html(
-			'<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 cardTh" id="' + divID + '"><img src="assets/images/template' + cardTemplateURL + 'Front.png" class="img img-responsive" /></div>'
+		$("#thGallery").append(
+			'<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6"><div class="innerThDiv" id="' + divID + '"><img src="' + ImageUrl + '" class="img img-responsive" /></div></div>'
 		);
-		$("#" + divID).css('background-image', 'url(' + ImageUrl + ')');
-		$("#" + divID).attr("data-characterName", charName);
-		$("#" + divID).attr("data-ImageUrl", ImageUrl);
-		$("#" + divID).attr("data-cardTemplateURL", cardTemplateURL);
-		$("#" + divID).attr("data-swapistatsURL", swapistatsURL);
+		// $("#" + divID).css('background-image', 'url(' + ImageUrl + ')');
+		$("#" + divID).attr('data-characterName', charName);
+		$("#" + divID).attr('data-ImageUrl', ImageUrl);
+		$("#" + divID).attr('data-cardTemplateURL', cardTemplateURL);
+		$("#" + divID).attr('data-swapistatsURL', swapistatsURL);
+
+		if(i === 6) {
+			$("#thGallery").append('</div><div class="row cardTh">');
+			i = 1;
+		}
+		else {
+			i++;
+		}
 	});
 
 	$(myLocation).append('</div>');
