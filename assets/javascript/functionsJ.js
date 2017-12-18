@@ -37,6 +37,5 @@ $(document).ready(function() {
     });
     console.log("this is the one I want => if I am blank kill me", starPlayer);
   });
-});
 
 });
