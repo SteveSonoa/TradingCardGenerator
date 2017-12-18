@@ -35,15 +35,16 @@ function giphyClicked() {
 console.log("This is function giphyClicked...");
 
 
-$(document).ready(function () {
-$('body').on('click', '.gifImg', function() {
-	var giphyUrl = $(this).attr("src");
-	console.log(giphyUrl);
+//$('body').on('click', '.gifImg', function() {
+$(document).ready(function(){
+$('.gifImg').on("click", function() {
+	var ImageUrl = $(this).attr("src");
+	console.log(ImageUrl);
+
 	displayTemplates();
 });
 
 });
-
 
 };
 
@@ -58,14 +59,14 @@ function displayTemplates () {
       });
 
     var templateDivsFF = $("<img>", {
-    	"class": "img img-responsive templateImg ",
+    	"class": "img img-responsive templateImgF",
         "src": "assets/images/templateFutureFront.png"
         //"height": 400
     });
     templateDivF.append(templateDivsFF);
 
     var templateDivsFB = $("<img>", {
-    	"class": "img img-responsive templateImg",
+    	"class": "img img-responsive templateImgB",
         "src": "assets/images/templateFutureBack.png"
         //"height": 400
     });
@@ -79,14 +80,14 @@ function displayTemplates () {
       });
 
     var templateDivsSF = $("<img>", {
-    	"class": "img img-responsive templateImg",
+    	"class": "img img-responsive templateImgF",
         "src": "assets/images/templateSimpleFront.png"
         //"height": 400
     });
     templateDivS.append(templateDivsSF);
 
     var templateDivsSB = $("<img>", {
-    	"class": "img img-responsive templateImg",
+    	"class": "img img-responsive templateImgB",
         "src": "assets/images/templateSimpleBack.png"
         //"height": 400
     });
@@ -100,19 +101,88 @@ function displayTemplates () {
       });
 
     var templateDivsCF = $("<img>", {
-    	"class": "img img-responsive templateImg",
+    	"class": "img img-responsive templateImgF",
         "src": "assets/images/templateCollegeFront.png"
         //"height": 400
     });
     templateDivC.append(templateDivsCF);
 
     var templateDivsCB = $("<img>", {
-    	"class": "img img-responsive templateImg",
+    	"class": "img img-responsive templateImgB",
         "src": "assets/images/templateCollegeBack.png"
         //"height": 400
     });
     templateDivC.append(templateDivsCB);
 
     $("#templateSelectDiv").append(templateDivC);
+    
+    
+
+    templateClickedFront();
+    templateClickedBack();
 
 };
+
+
+function templateClickedFront() {
+
+console.log("This is function templateClickedFront...");
+
+//$(document).ready(function () {
+//$('body').on('click', '.templateImgF', function() {
+$('.templateImgF').on("click", function() {
+    var cardTemplateURLFront = $(this).attr("src");
+    console.log(cardTemplateURLFront);
+
+});
+
+//});
+
+
+};
+
+function templateClickedBack() {
+
+console.log("This is function templateClickedBack...");
+
+//$(document).ready(function () {
+//$('body').on('click', '.templateImgB', function() {
+$('.templateImgB').on("click", function() {
+    var cardTemplateURLBack = $(this).attr("src");
+    console.log(cardTemplateURLBack);
+
+    // Stop listening to giphy image click event
+    console.log("Stop on click event for giphy images!");
+    $(".gifImg").off("click");
+    // Stop listening to card template-front click event
+    console.log("Stop on click event for card template front!");
+    $(".templateImgF").off("click");
+    // Stop listening to card template-back click event
+    console.log("Stop on click event for card template back!");
+    $(".templateImgB").off("click");
+
+    // Clear gifDiv
+    $("#imageSelectDiv").show().fadeOut(3000);
+    $("#templateSelectDiv").show().fadeOut(3000);
+
+    setTimeout(function() {
+
+    console.log("imageSelectDiv cleared!")
+    $("#imageSelectDiv").empty();
+
+    console.log("templateSelectDiv cleared!")
+    $("#templateSelectDiv").empty();
+
+    }, 3000);
+
+    //then call function storeData() here
+
+});
+
+
+
+
+//});
+
+};
+
