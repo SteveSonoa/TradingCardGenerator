@@ -65,7 +65,6 @@
 #CollegeBackImage {
 	top: 2%;
 	left: 7.5%;
-	width: 22%;
 }
 
 #SimpleBackName {
@@ -92,8 +91,6 @@
 #SimpleBackImage {
 	top: 6%;
 	left: 12%;
-	width: 36.5%;
-	background-color: #ffffff;
 }
 
 #FutureBackName {
@@ -121,6 +118,4 @@
 #FutureBackImage {
 	top: 11.5%;
 	left: 31.5%;
-	width: 37%;
-	background-color: #ffffff;
 }
