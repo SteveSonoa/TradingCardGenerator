@@ -123,12 +123,13 @@ function displayThTable(divName) {
 
 	$(myLocation).append('</div>');
 	thListener();
+	thFlipListener();
 }
 
 function thListener() {
 	$(document).on("click", ".innerThDiv", function(event) {
 		// console.log($(this).attr("data-charactername"));
-		console.log($(this).attr("data-imageurl"));
+		// console.log($(this).attr("data-imageurl"));
 
 		// Set global variables to the clicked item
 		ImageUrl = $(this).attr("data-imageurl");
@@ -136,7 +137,7 @@ function thListener() {
 		characterName = $(this).attr("data-charactername");
 		swapistatsURL = $(this).attr("data-swapistatsurl");
 
-		console.log(ImageUrl);
+		// console.log(ImageUrl);
 
 		// Delete a card creation in progress
 		$("#imageSelectDiv").html(" ");
@@ -145,14 +146,24 @@ function thListener() {
 		// Draw the clicked card in the main area
 		if($(this).attr("data-cardtemplateurl") === "Future") {
 			drawFutureFront("mainCardDisplayDiv");
+			$("#templateImageBack").toggle("drop");
 		}
 		else if($(this).attr("data-cardtemplateurl") === "College") {
 			drawCollegeFront("mainCardDisplayDiv");
+			$("#templateImageBack").toggle("drop");
 		}
 		else {
 			drawSimpleFront("mainCardDisplayDiv");
+			$("#templateImageBack").toggle("drop");
 		}
 		
+	});
+}
+
+function thFlipListener() {
+	$(document).on("click", "#templateArea", function(event) {
+		$("#templateImage").toggle("drop");
+		$("#templateImageBack").toggle("drop");
 	});
 }
 
