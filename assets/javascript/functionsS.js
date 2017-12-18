@@ -1,30 +1,3 @@
-// Creates the layout of the Main Page when a user first accesses the site
-function drawMainPage(introDiv) {
-	drawLogo("bodyLogo");
-	searchForCharacter("characterSearch");
-}
-
-// Draws the company logo in any div on the site, automatically scaling to the available space
-function drawLogo(logoDiv) {
-	var myLocation = "#" + logoDiv;
-	$(myLocation).html('<img src="assets/images/logo.png" alt="Artificial Rag Gnomes" class="img img-responsive" />');
-}
-
-function searchForCharacter(searchDiv) {
-	var myLocation = "#" + searchDiv;
-	$(myLocation).html(
-		'<form class="form-inline">'
-	+		'<div>'	
-	+			'<label for="characterSearch">Search for an Star Wars character</label>'
-	+		'</div>'
-	+		'<div class="input-group">'
-	+			'<input type="text" class="form-control longWidth" id="characterSearch" placeholder="Character Name">'
-	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default">Submit</button></span>'
-	+		'</div>'
-	+	'</form>'
-	);
-}
-
 // Draw the card collections available to the character, including the ability to flip it over from front to back
 function displayFinishedCards(libraryDiv) {
 	var myLocation = "#" + libraryDiv;
