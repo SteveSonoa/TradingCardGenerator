@@ -5,7 +5,8 @@
 	margin-top: 25px;
 }
 
-#templateImage {
+#templateImage,
+#templateImageBack {
 	position: relative;
 	z-index: 1;
 }
@@ -13,7 +14,7 @@
 .myGiphyImg {
 	position: absolute;
 	top: 0;
-	left: 4.75%;
+	left: 15px;
 	z-index: -1;
 }
 
@@ -24,7 +25,8 @@
 
 #CollegeFrontName {
 	top: 7%;
-	left: 31%;
+	left: 100px;
+	width: 150px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #ffffff;
@@ -32,7 +34,8 @@
 
 #SimpleFrontName {
 	top: 10%;
-	left: 43%;
+	left: 125px;
+	width: 200px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #ffffff;
@@ -41,18 +44,20 @@
 
 #FutureFrontName {
 	bottom: 5%;
-	left: 25.5%;
+	left: 110px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	color: #ffffff;
 	font-weight: bolder;
 	text-align: center;
-	max-width: 50%;
+	width: 100px;
+	margin: 0 auto;
 }
 
 #CollegeBackName {
 	top: 7%;
-	left: 31%;
+	left: 100px;
+	width: 150px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #ffffff;
@@ -60,61 +65,67 @@
 
 #CollegeBackBio {
 	top: 33%;
-	left: 10%;
+	left: 32px;
 	width: 80%;
-	text-align: justify;
+	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #ffffff;
+	margin: 0 auto;
 }
 
 #CollegeBackImage {
 	top: 2%;
-	left: 7.5%;
+	left: 22px;
+	width: 70px;
 }
 
 #SimpleBackName {
 	top: 58%;
-	left: 10%;
+	left: 30px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	color: #ffffff;
 	font-weight: bolder;
-	width: 81%;
+	width: 250px;
 	text-align: center;
+	margin: 0 auto;
 }
 
 #SimpleBackBio {
 	top: 69%;
-	left: 10%;
-	width: 81%;
-	text-align: justify;
+	left: 30px;
+	width: 250px;
+	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #ffffff;
+	margin: 0 auto;
 }
 
 #SimpleBackImage {
 	top: 6%;
-	left: 12%;
+	left: 36px;
+	width: 118px;
 }
 
 #FutureBackName {
 	top: 55%;
-	left: 25.5%;
+	left: 115px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	color: #ffffff;
 	font-weight: bolder;
 	text-align: center;
-	max-width: 50%;
+	width: 50%;
+	margin: 0 auto;
 }
 
 #FutureBackBio {
-	bottom: 11%;
-	left: 15%;
-	width: 70%;
-	text-align: justify;
+	top: 71%;
+	left: 25px;
+	width: 260px;
+	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;
 	color: #000000;
@@ -123,5 +134,6 @@
 
 #FutureBackImage {
 	top: 11.5%;
-	left: 31.5%;
+	left: 99px;
+	width: 116px;
 }
