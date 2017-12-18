@@ -40,6 +40,7 @@ $(document).ready(function(){
 $('.gifImg').on("click", function() {
 	var ImageUrl = $(this).attr("src");
 	console.log(ImageUrl);
+>>>>>>> 643a564d8b2f48a9a1cee3e40e25536bed62101f
 	displayTemplates();
 });
 
@@ -114,7 +115,9 @@ function displayTemplates () {
     templateDivC.append(templateDivsCB);
 
     $("#templateSelectDiv").append(templateDivC);
-
+<<<<<<< HEAD
+    
+    
 
     templateClickedFront();
     templateClickedBack();
