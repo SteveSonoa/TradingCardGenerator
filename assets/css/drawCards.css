@@ -1,7 +1,6 @@
 #templateArea {
 	width: 285px;
 	height: 400px;
-	background-color: #00FF00;
 	margin: 0 auto;
 	margin-top: 25px;
 }
@@ -9,6 +8,13 @@
 #templateImage {
 	position: relative;
 	z-index: 1;
+}
+
+.myGiphyImg {
+	position: absolute;
+	top: 0;
+	left: 4.75%;
+	z-index: -1;
 }
 
 .templateElements {

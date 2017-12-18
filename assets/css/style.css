@@ -8,7 +8,11 @@
 }
 
 .cardTh {
-	margin-bottom: 15px;
+	margin-bottom: 25px;
+}
+
+.innerThDiv {
+    margin: 0 auto;
 }
 
 .giphyDiv {
