@@ -5,7 +5,8 @@
 	margin-top: 25px;
 }
 
-#templateImage {
+#templateImage,
+#templateImageBack {
 	position: relative;
 	z-index: 1;
 }
@@ -70,7 +71,7 @@
 
 #CollegeBackImage {
 	top: 2%;
-	left: 7.5%;
+	left: 7%;
 }
 
 #SimpleBackName {
@@ -96,7 +97,7 @@
 
 #SimpleBackImage {
 	top: 6%;
-	left: 12%;
+	left: 11.5%;
 }
 
 #FutureBackName {
