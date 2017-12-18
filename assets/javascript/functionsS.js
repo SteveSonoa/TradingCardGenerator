@@ -29,53 +29,53 @@ function test() {
 	var object1 = {
 		characterName: "Han Solo",
 		ImageUrl: "https://www.themarysue.com/wp-content/uploads/2017/07/han-solo-return-of-the-jedi_612x380.jpg",
-		charTemplateURL: "Future",
+		cardTemplateURL: "Future",
 		swapistatsURL: ""
 	};
 
 	var object2 = {
 		characterName: "Nien Nunb",
 		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/databank_niennunb_01_169_31eccf40.jpeg?region=0%2C49%2C1560%2C780",
-		charTemplateURL: "Simple",
+		cardTemplateURL: "Simple",
 		swapistatsURL: ""
 	};
 	var object3 = {
 		characterName: "Leia Organa",
 		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/leia_6d2292da.jpeg?region=295%2C124%2C1434%2C806&width=320",
-		charTemplateURL: "College",
+		cardTemplateURL: "College",
 		swapistatsURL: ""
 	};
 
 	var object4 = {
 		characterName: "Jabba The Hutt",
 		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/Jabba-The-Hutt_b5a08a70.jpeg?region=0%2C0%2C1200%2C675&width=768",
-		charTemplateURL: "Future",
+		cardTemplateURL: "Future",
 		swapistatsURL: ""
 	};
 	var object5 = {
 		characterName: "Han Solo",
 		ImageUrl: "https://www.themarysue.com/wp-content/uploads/2017/07/han-solo-return-of-the-jedi_612x380.jpg",
-		charTemplateURL: "Future",
+		cardTemplateURL: "Future",
 		swapistatsURL: ""
 	};
 
 	var object6 = {
 		characterName: "Nien Nunb",
 		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/databank_niennunb_01_169_31eccf40.jpeg?region=0%2C49%2C1560%2C780",
-		charTemplateURL: "Simple",
+		cardTemplateURL: "Simple",
 		swapistatsURL: ""
 	};
 	var object7 = {
 		characterName: "Leia Organa",
 		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/leia_6d2292da.jpeg?region=295%2C124%2C1434%2C806&width=320",
-		charTemplateURL: "College",
+		cardTemplateURL: "College",
 		swapistatsURL: ""
 	};
 
 	var object8 = {
 		characterName: "Jabba The Hutt",
 		ImageUrl: "https://lumiere-a.akamaihd.net/v1/images/Jabba-The-Hutt_b5a08a70.jpeg?region=0%2C0%2C1200%2C675&width=768",
-		charTemplateURL: "Future",
+		cardTemplateURL: "Future",
 		swapistatsURL: ""
 	};
 
@@ -107,10 +107,10 @@ function displayThTable(divName) {
 			'<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6"><div class="innerThDiv" id="' + divID + '"><img src="' + ImageUrl + '" class="img img-responsive" /></div></div>'
 		);
 		// $("#" + divID).css('background-image', 'url(' + ImageUrl + ')');
-		$("#" + divID).attr('data-characterName', charName);
-		$("#" + divID).attr('data-ImageUrl', ImageUrl);
-		$("#" + divID).attr('data-cardTemplateURL', cardTemplateURL);
-		$("#" + divID).attr('data-swapistatsURL', swapistatsURL);
+		$("#" + divID).attr('data-charactername', charName);
+		$("#" + divID).attr('data-imageurl', ImageUrl);
+		$("#" + divID).attr('data-cardtemplateurl', cardTemplateURL);
+		$("#" + divID).attr('data-swapistatsurl', swapistatsURL);
 
 		if(i === 6) {
 			$("#thGallery").append('</div><div class="row cardTh">');
@@ -122,6 +122,38 @@ function displayThTable(divName) {
 	});
 
 	$(myLocation).append('</div>');
+	thListener();
+}
+
+function thListener() {
+	$(document).on("click", ".innerThDiv", function(event) {
+		// console.log($(this).attr("data-charactername"));
+		console.log($(this).attr("data-imageurl"));
+
+		// Set global variables to the clicked item
+		ImageUrl = $(this).attr("data-imageurl");
+		cardTemplateURL = $(this).attr("data-cardtemplateurl");
+		characterName = $(this).attr("data-charactername");
+		swapistatsURL = $(this).attr("data-swapistatsurl");
+
+		console.log(ImageUrl);
+
+		// Delete a card creation in progress
+		$("#imageSelectDiv").html(" ");
+		$("#templateSelectDiv").html(" ");
+
+		// Draw the clicked card in the main area
+		if($(this).attr("data-cardtemplateurl") === "Future") {
+			drawFutureFront("mainCardDisplayDiv");
+		}
+		else if($(this).attr("data-cardtemplateurl") === "College") {
+			drawCollegeFront("mainCardDisplayDiv");
+		}
+		else {
+			drawSimpleFront("mainCardDisplayDiv");
+		}
+		
+	});
 }
 
 function drawGiphy(charName) {
@@ -147,7 +179,7 @@ function drawGiphy(charName) {
 
 			var innerGifDiv = $("<div>", {
 				class: "giphyDiv",
-				"data-ImageUrl": response.data[i].images.original.url
+				"data-imageurl": response.data[i].images.original.url
 			});
 
 			// innerGifDiv.css('background-image', 'url(' + response.data[i].images.original.url + ')');
