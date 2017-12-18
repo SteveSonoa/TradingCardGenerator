@@ -20,6 +20,27 @@
     margin: 0 auto;
 }
 
+.credits {
+    line-height: 200%;
+    color: #000000;
+    font-size: 20px;
+}
+
+#footer {
+    background-color: #dddddd;
+}
+
+.centerFooter {
+    border-left: #cccccc 1px solid;
+    border-right: #cccccc 1px solid;
+}
+
+.techUsed {
+    line-height: 200%;
+    color: #000000;
+    font-size: 14px;    
+}
+
 .giphyDiv {
     background-repeat: no-repeat;
     background-position: center center;
