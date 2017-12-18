@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Creates the layout of the Main Page when a user first accesses the site
 function drawMainPage(introDiv) {
 	var myLocation = "#" + introDiv;
@@ -44,6 +45,8 @@ function searchForCharacter(searchDiv) {
 	);
 }
 
+=======
+>>>>>>> 369fae7bdf3e20aed0953b4ff71caee5b4be0484
 // Draw the card collections available to the character, including the ability to flip it over from front to back
 function displayFinishedCards(libraryDiv) {
 	var myLocation = "#" + libraryDiv;
@@ -152,12 +155,13 @@ function drawGiphy(charName) {
 				"data-ImageUrl": response.data[i].images.original.url
 			});
 
+			// innerGifDiv.css('background-image', 'url(' + response.data[i].images.original.url + ')');
+
 			var gifImg = $("<img>", {
 				"class": "img img-responsive gifImg",
 				"src": response.data[i].images.original.url,
 				"height": 400
 			});
-
 
 	      innerGifDiv.append(gifImg);
 	      gifDiv.append(innerGifDiv);
