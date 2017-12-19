@@ -39,12 +39,8 @@
 
 	<script src="assets/javascript/app.js"></script>
 	<script src="assets/javascript/vars.js"></script>
-	<script src="assets/javascript/functionsS.js"></script>
-	<script src="assets/javascript/functionsH.js"></script>
-	<script src="assets/javascript/functionsJ.js"></script>
-	<script src="assets/javascript/functionsV.js"></script>
+	<script src="assets/javascript/functions.js"></script>
 	<script src="assets/javascript/functionsDrawCards.js"></script>
-	<script src="assets/javascript/image-logic.js"></script>
 
 	<title>Star Wars Trading Cards</title>
 
@@ -111,7 +107,29 @@
 	</div>
 
 	<script type="text/javascript">
-		displayThTable("cardThDiv");
+		$(document).ready(function() {
+			// Draw the Thumbnail gallery
+			displayThTable("cardThDiv");
+
+			// LISTENER: SUBMIT BUTTON
+			$("#submitBtn").on("click", function(e) {
+				e.preventDefault(); //stops it from reloading the page
+				clickSubmitButton();
+			});
+
+			// LISTENER: TEMPLATE SELECTION
+			$(document).on("click", ".templateSelector", function(event) {
+				cardTemplateURL = $(this).attr("id");
+				templateClicked();
+			});
+
+			// LISTENER: GIF SELECTION
+			$(document).on("click", ".gifImg", function(event) {
+				ImageUrl = $(this).attr("src");
+				giphyClicked();
+			});
+
+		}); // document ready
 	</script>
 
 </body>
