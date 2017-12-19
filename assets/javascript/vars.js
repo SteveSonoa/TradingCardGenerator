@@ -1,1 +1,1 @@
-var ImageUrl, cardTemplateURL, characterName, swapistatsURL;
+var ImageUrl, cardTemplateURL, characterName, swapiWeight, swapiHeight, swapiYear, swapiHairColor, swapiEyeColor;
