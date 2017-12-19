@@ -23,7 +23,7 @@ $(document).ready(function() {
     }).done(function(response) {
       console.log(response);
       //getting the characters name and storing it globally
-      characterName = response.results[0].name;
+      
 
       var results = response.results;
 
@@ -35,6 +35,7 @@ $(document).ready(function() {
 
       // Save the new price in Firebase
       database.ref().set(firstCharacter);
+      characterName = response.results[0].name;
     });
     console.log("this is the one I want => if I am blank kill me", starPlayer);
   });
