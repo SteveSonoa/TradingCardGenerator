@@ -1,5 +1,6 @@
 function drawCollegeFront(divName) {
 	var myLocation = "#" + divName;
+	
 	$(myLocation).html(
 		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
@@ -8,7 +9,13 @@ function drawCollegeFront(divName) {
 	+			'</div>'
 	+			'<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="templateImageBack"><img src="assets/images/templateCollegeBack.png" height="400" width="285" />'
 	+				'<div class="templateElements text-uppercase" id="CollegeBackName">' + characterName + '</div>'
-	+				'<div class="templateElements" id="CollegeBackBio">' + swapistatsURL + '</div>'
+	+				'<div class="templateElements" id="CollegeBackBio">'
+	+					'<b>HEIGHT:</b> ' + swapiHeight + 'm<br>'
+	+					'<b>WEIGHT:</b> ' + parseInt(swapiWeight) * 2.2 + 'lbs<br>'
+	+					'<b>EYE COLOR:</b> ' + swapiEyeColor + '<br>'
+	+					'<b>HAIR COLOR:</b> ' + swapiHairColor + '<br>'
+	+					'<b>BORN:</b> ' + swapiYear
+	+				'</div>'
 	+				'<div class="templateElements text-uppercase" id="CollegeBackImage"><img src="' + ImageUrl + '" class="img img-responsive" height="98px" width="70px" /></div>'
 	+			'</div>'
 	+		'</div>'
@@ -43,7 +50,13 @@ function drawSimpleFront(divName) {
 	+			'</div>'
 	+			'<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="templateImageBack"><img src="assets/images/templateSimpleBack.png" height="400" width="285" />'
 	+				'<div class="templateElements text-uppercase" id="SimpleBackName">' + characterName + '</div>'
-	+				'<div class="templateElements" id="SimpleBackBio">' + swapistatsURL + '</div>'
+	+				'<div class="templateElements" id="SimpleBackBio">'
+	+					'<b>HEIGHT:</b> ' + swapiHeight + 'm<br>'
+	+					'<b>WEIGHT:</b> ' + parseInt(swapiWeight) * 2.2 + 'lbs<br>'
+	+					'<b>EYE COLOR:</b> ' + swapiEyeColor + '<br>'
+	+					'<b>HAIR COLOR:</b> ' + swapiHairColor + '<br>'
+	+					'<b>BORN:</b> ' + swapiYear
+	+				'</div>'
 	+				'<div class="templateElements text-uppercase" id="SimpleBackImage"><img src="' + ImageUrl + '" class="img img-responsive" height="165px" width="118px" /></div>'
 	+			'</div>'
 	+		'</div>'
@@ -79,7 +92,13 @@ function drawFutureFront(divName) {
 	+			'</div>'
 	+			'<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="templateImageBack"><img src="assets/images/templateFutureBack.png" height="400" width="285" />'
 	+				'<div class="templateElements text-uppercase" id="FutureBackName">' + characterName + '</div>'
-	+				'<div class="templateElements" id="FutureBackBio">' + swapistatsURL + '</div>'
+	+				'<div class="templateElements" id="FutureBackBio">'
+	+					'<b>HEIGHT:</b> ' + swapiHeight + 'm<br>'
+	+					'<b>WEIGHT:</b> ' + parseInt(swapiWeight) * 2.2 + 'lbs<br>'
+	+					'<b>EYE COLOR:</b> ' + swapiEyeColor + '<br>'
+	+					'<b>HAIR COLOR:</b> ' + swapiHairColor + '<br>'
+	+					'<b>BORN:</b> ' + swapiYear
+	+				'</div>'
 	+				'<div class="templateElements text-uppercase" id="FutureBackImage"><img src="' + ImageUrl + '" class="img img-responsive" height="162" width="116" /></div>'
 	+			'</div>'
 	+		'</div>'

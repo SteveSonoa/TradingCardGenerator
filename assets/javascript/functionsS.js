@@ -99,10 +99,10 @@ function displayThTable(divName) {
 	database.ref().on("child_added", function(snapshot) {
 		var divID = Math.floor(Math.random() * 99999999999);
 
-		var charName = snapshot.val().characterName;
-		var ImageUrl = snapshot.val().ImageUrl;
-		var cardTemplateURL = snapshot.val().cardTemplateURL;
-		var swapistatsURL = snapshot.val().swapistatsURL;
+		charName = snapshot.val().characterName;
+		ImageUrl = snapshot.val().ImageUrl;
+		cardTemplateURL = snapshot.val().cardTemplateURL;
+		swapistatsURL = snapshot.val().swapistatsURL;
 		$("#thGallery").append(
 			'<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6"><div class="innerThDiv" id="' + divID + '"><img src="' + ImageUrl + '" class="img img-responsive" /></div></div>'
 		);
