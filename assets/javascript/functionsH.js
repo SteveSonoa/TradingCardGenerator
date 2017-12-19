@@ -1,8 +1,4 @@
-function storeData(){
-// firebase.initializeApp(config);
 
- 
-//  var database = firebase.database();
 
 function storeData() {
     //Get user input
