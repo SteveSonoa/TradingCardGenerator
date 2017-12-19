@@ -46,8 +46,8 @@ function displayThTable(divName) {
 			swapiHeight = "???";
 		}
 
-		// Add the newest thumbnail to the beginning of the list
-		$("#thGallery").prepend(
+		// Add the newest thumbnail to the list
+		$("#thGallery").append(
 			'<div class="col-lg-2 col-md-2 col-sm-6 col-xs-6"><div class="innerThDiv" id="' + divID + '"><img src="' + ImageUrl + '" class="img img-responsive" /></div></div>'
 		);
 		// Add the relevant data to the div so it can be referenced when clicked to draw the main card
