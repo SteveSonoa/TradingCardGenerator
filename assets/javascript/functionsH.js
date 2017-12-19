@@ -12,7 +12,11 @@ function storeData() {
                 characterName: characterName,
                 ImageUrl: ImageUrl,
                 cardTemplateURL: cardTemplateURL,
-                swapistatsURL: swapistatsURL
+                swapiHeight: swapiHeight,
+                swapiWeight: swapiWeight,
+                swapiYear: swapiYear,
+                swapiHairColor: swapiHairColor,
+                swapiEyeColor: swapiEyeColor
             };
 
             database.ref().push(character);
