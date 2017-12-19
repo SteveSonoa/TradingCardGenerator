@@ -39,12 +39,8 @@
 
 	<script src="assets/javascript/app.js"></script>
 	<script src="assets/javascript/vars.js"></script>
-	<script src="assets/javascript/functionsS.js"></script>
-	<script src="assets/javascript/functionsH.js"></script>
-	<script src="assets/javascript/functionsJ.js"></script>
-	<script src="assets/javascript/functionsV.js"></script>
+	<script src="assets/javascript/functions.js"></script>
 	<script src="assets/javascript/functionsDrawCards.js"></script>
-	<script src="assets/javascript/image-logic.js"></script>
 
 	<title>Star Wars Trading Cards</title>
 
@@ -53,7 +49,7 @@
 <body>
 	<div class="container" id="mainDiv">
 		<div col="row">
-			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" id="mainText">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" id="mainText">
 				<center><img src="assets/images/pageHeaderLogo.png" alt="Create Your Own Star Wars Trading Cards!" class="img img-responsive"></center>
 				<div class="container-float">
 					<div class="row">
@@ -71,7 +67,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="bodyLogo"><img src="assets/images/logo.png" alt="Artificial Rag Gnomes" class="img img-responsive" /></div>
 		</div>	
 	</div>
 
@@ -79,9 +74,62 @@
 	<div class="container" id="templateSelectDiv"></div>
 	<div class="container" id="mainCardDisplayDiv"></div>
 	<div class="container" id="cardThDiv"></div>
+	<div class="container" id="footer">
+		<div class="row">
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="fLogo">
+				<img src="assets/images/logo.png" alt="Artificial Rag Gnomes" class="img img-responsive" />
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 centerFooter" id="fCredits">
+				<h2>Contributors</h2>
+				<center>
+					<a href="https://github.com/boginis1" target="_blank" class="credits"><i class="fa fa-github" aria-hidden="true"></i> Holly Zoba</a><br>
+					<a href="https://github.com/ClassyP" target="_blank" class="credits"><i class="fa fa-github" aria-hidden="true"></i> Jean-Philip Lamarre</a><br>
+					<a href="https://github.com/SteveSonoa" target="_blank" class="credits"><i class="fa fa-github" aria-hidden="true"></i> Steve Marshall</a><br>
+					<a href="https://github.com/vnadaraj" target="_blank" class="credits"><i class="fa fa-github" aria-hidden="true"></i> Vick Nadarajan</a>
+				</center>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="fTech">
+				<h2>Tech Used</h2>
+				<a href="https://swapi.co/" target="_blank" class="techUsed"><i class="fa fa-users" aria-hidden="true"></i> SWapi</a><br>
+				<a href="https://developers.giphy.com/" target="_blank" class="techUsed"><i class="fa fa-file-video-o" aria-hidden="true"></i> Giphy API</a><br>
+				<a href="https://jqueryui.com/" target="_blank" class="techUsed"><i class="fa fa-cogs" aria-hidden="true"></i> jQuery UI</a><br>
+				<a href="http://fontawesome.io/" target="_blank" class="techUsed"><i class="fa fa-font-awesome" aria-hidden="true"></i> Font Awesome</a><br>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12" id="fTech">
+				<h2>&nbsp</h2>
+				<a href="https://jquery.com/" target="_blank" class="techUsed"><i class="fa fa-usd" aria-hidden="true"></i> jQuery</a><br>
+				<a href="https://getbootstrap.com/" target="_blank" class="techUsed"><i class="fa fa-code" aria-hidden="true"></i> Bootstrap</a><br>
+				<a href="https://firebase.google.com/" target="_blank" class="techUsed"><i class="fa fa-google" aria-hidden="true"></i> Firebase</a><br>
+				<a href="https://github.com/" target="_blank" class="techUsed"><i class="fa fa-github-alt" aria-hidden="true"></i> GitHub</a><br>
+				<a href="https://github.com/SteveSonoa/TradingCardGenerator" target="_blank" class="techUsed"><i class="fa fa-code-fork" aria-hidden="true"></i> Project Repository</a><br>
+			</div>
+		</div>
+	</div>
 
 	<script type="text/javascript">
-		displayThTable("cardThDiv");
+		$(document).ready(function() {
+			// Draw the Thumbnail gallery
+			displayThTable("cardThDiv");
+
+			// LISTENER: SUBMIT BUTTON
+			$("#submitBtn").on("click", function(e) {
+				e.preventDefault(); //stops it from reloading the page
+				clickSubmitButton();
+			});
+
+			// LISTENER: TEMPLATE SELECTION
+			$(document).on("click", ".templateSelector", function(event) {
+				cardTemplateURL = $(this).attr("id");
+				templateClicked();
+			});
+
+			// LISTENER: GIF SELECTION
+			$(document).on("click", ".gifImg", function(event) {
+				ImageUrl = $(this).attr("src");
+				giphyClicked();
+			});
+
+		}); // document ready
 	</script>
 
 </body>
