@@ -1,14 +1,21 @@
 #templateArea {
 	width: 285px;
 	height: 400px;
-	background-color: #00FF00;
 	margin: 0 auto;
 	margin-top: 25px;
 }
 
-#templateImage {
+#templateImage,
+#templateImageBack {
 	position: relative;
 	z-index: 1;
+}
+
+.myGiphyImg {
+	position: absolute;
+	top: 0;
+	left: 15px;
+	z-index: -1;
 }
 
 .templateElements {
@@ -18,53 +25,39 @@
 
 #CollegeFrontName {
 	top: 7%;
-	left: 31%;
+	left: 100px;
+	width: 150px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #ffffff;
 }
 
-#CollegeFrontIcon {
-	top: 3%;
-	left: 9%;
-	width: 20%;
-}
-
 #SimpleFrontName {
 	top: 10%;
-	left: 43%;
+	left: 125px;
+	width: 200px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #ffffff;
 	font-weight: bold;
 }
 
-#SimpleFrontIcon {
-	top: 6%;
-	left: 13.5%;
-	width: 28%;
-}
-
 #FutureFrontName {
 	bottom: 5%;
-	left: 25.5%;
+	left: 110px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	color: #ffffff;
 	font-weight: bolder;
 	text-align: center;
-	max-width: 50%;
-}
-
-#FutureFrontIcon {
-	top: 2.5%;
-	right: 15%;
-	width: 8%;
+	width: 100px;
+	margin: 0 auto;
 }
 
 #CollegeBackName {
 	top: 7%;
-	left: 31%;
+	left: 100px;
+	width: 150px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #ffffff;
@@ -72,120 +65,77 @@
 
 #CollegeBackBio {
 	top: 33%;
-	left: 10%;
+	left: 32px;
 	width: 80%;
-	text-align: justify;
+	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	color: #ffffff;
-}
-
-#CollegeBackAffiliation {
-	bottom: 2%;
-	left: 30%;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 24px;
-	color: #ffffff;
-}
-
-#CollegeBackIcon {
-	bottom: 2%;
-	left: 9%;
-	width: 20%;
+	margin: 0 auto;
 }
 
 #CollegeBackImage {
 	top: 2%;
-	left: 7.5%;
-	width: 22%;
+	left: 22px;
+	width: 70px;
 }
 
 #SimpleBackName {
 	top: 58%;
-	left: 10%;
+	left: 30px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 20px;
 	color: #ffffff;
 	font-weight: bolder;
-	width: 81%;
+	width: 250px;
 	text-align: center;
+	margin: 0 auto;
 }
 
 #SimpleBackBio {
 	top: 69%;
-	left: 10%;
-	width: 81%;
-	text-align: justify;
+	left: 30px;
+	width: 250px;
+	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 	color: #ffffff;
-}
-
-#SimpleBackAffiliation {
-	top: 35%;
-	right: 10%;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 24px;
-	color: #ffffff;
-	width: 33%;
-	text-align: center;
-}
-
-#SimpleBackIcon {
-	top: 8%;
-	right: 10%;
-	width: 33%;
+	margin: 0 auto;
 }
 
 #SimpleBackImage {
 	top: 6%;
-	left: 12%;
-	width: 36.5%;
-	background-color: #ffffff;
+	left: 36px;
+	width: 118px;
 }
 
 #FutureBackName {
 	top: 55%;
-	left: 25.5%;
+	left: 110px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	color: #ffffff;
 	font-weight: bolder;
 	text-align: center;
-	max-width: 50%;
+	width: 100px;
+	margin: 0 auto;
 }
 
+
+
 #FutureBackBio {
-	bottom: 11%;
-	left: 15%;
-	width: 70%;
-	text-align: justify;
+	top: 71%;
+	left: 25px;
+	width: 260px;
+	text-align: center;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;
 	color: #000000;
 	z-index: 3;
 }
 
-#FutureBackAffiliation {
-	bottom: 1%;
-	left: 25%;
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 20px;
-	color: #ffffff;
-	width: 50%;
-	text-align: center;
-}
-
-#FutureBackIcon {
-	bottom: 9%;
-	left: 37.5%;
-	width: 28%;
-	opacity: 0.33;
-}
-
 #FutureBackImage {
 	top: 11.5%;
-	left: 31.5%;
-	width: 37%;
-	background-color: #ffffff;
+	left: 99px;
+	width: 116px;
 }

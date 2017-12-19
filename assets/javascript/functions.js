@@ -1,11 +1,9 @@
-
-
 // Creates the layout of the Main Page when a user first accesses the site
 function drawMainPage(introDiv) {
 	var myLocation = "#" + introDiv;
 	$(myLocation).html(
 	+	'<div col="row">'
-	+		'<div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" id="mainText">'
+	+		'<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" id="mainText">'
 	+			'<div><h1 class="text-center">Create your own</h1></div>'
 	+			'<div><h1 class="text-center">STAR WARS</h1></div>'
 	+			'<div><h1 class="text-center">Trading Cards!</h1></div>'
@@ -18,11 +16,12 @@ function drawMainPage(introDiv) {
 	+				'</div>'
 	+			'</div>'
 	+		'</div>' // headerText
-	+		'<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="bodyLogo"></div>'
+	+		'<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="bodyLogo"></div>'
 	+	'</div>'
 	);
 	drawLogo("bodyLogo");
 	searchForCharacter("characterSearch");
+	storeData();
 }
 
 // Draws the company logo in any div on the site, automatically scaling to the available space
@@ -39,8 +38,6 @@ function searchForCharacter(searchDiv) {
 	+			'<label for="characterSearch">Search for an Star Wars character</label>'
 	+		'</div>'
 	+		'<div class="input-group">'
-	+			'<input type="text" class="form-control longWidth" id="playerSearch" name="merp" placeholder="Player Name">'
-	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default" id="submitBtn">Submit</button></span>'
 	+			'<input type="text" class="form-control longWidth" id="characterSearch" placeholder="Character Name">'
 	+			'<span class="input-group-btn"><button type="submit" class="btn btn-default">Submit</button></span>'
 	+		'</div>'
@@ -105,102 +102,126 @@ function displayStories(storyDiv) {
 function testing(){
 	
 }
-$(document).ready(function() {	
-	// ajax call to starwars api
-	$("#submitBtn").on("click", function(e) {
-	 	e.preventDefault(); //stops it from reloading the page
-		var starPlayer = $("input[name='merp']").val().trim();
-		$("input").val("");
-		console.log("Star Player:",starPlayer);
-		// console.log(e);
-		var swApi = "https://swapi.co/api/people/?search=" + starPlayer;
-		console.log("SwAPI URL:", swApi);
-		$.ajax({
-			url: swApi,
-			method: 'GET'
-		  }).done(function(response) {
-			console.log(response);
-
-			var results = response.results;
-
-			var firstCharacter = results[0];
 
 
-		  });
-		console.log('this is the one I want => if I am blank kill me', starPlayer);
-	});
+function storeData(){
+firebase.initializeApp(config);
 
-})
-
-
-
-//   // After the data from the AJAX request comes back
-//   .done(function(response) {
-// 	// Saving the image_original_url property
-// 	var people = response.data.image_original_url;
-// 	// Creating and storing an image tag
-// 	var catImage = $("<img>");
-// 	// Setting the catImage src attribute to imageUrl
-// 	catImage.attr("src", imageUrl);
-// 	catImage.attr("alt", "cat image");
-// 	// Prepending the catImage to the images div
-// 	$("#images").prepend(catImage);
-//   });
-
-
-// Function for new user login - steps
- // Button for adding login info
- // Grab user input
- // Creates local "temporary" object for holding login data
- // Upload login data to the database
- // Logs everything to console
- // Somehow let user know they have been added
- // Clear all of the text-boxes
-
-
-  // Create Firebase event for adding user info to the database 
-  // Store everything into a variable.
-  // Create a new account with email and pasword
-  //   Firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-  //   Handle Errors here.
-  //   var errorCode = error.code;
-  //   var errorMessage = error.message;
   
+  var database = firebase.database();
 
+    // Capture Button Click and create new user with the name in the database
+    $(".btn").on("click", function(event) {
+      // Don't refresh the page!
+      event.preventDefault();
+      //Get user input
+      var characterName = $("#characterSearch").val().trim();
+      
+      //create local "temporary" object for holding user input data
+      var character = {
+        characterName: characterName,
+        ImageUrl: "",
+        cardTemplateURL: "",
+        swapistatsURL: "",
 
-  // when an existing user signs in - pass data to firebase
- // Button for adding login info
- // Grab user input
- // Creates local "temporary" object for holding login data
- // Upload login data to the database
- // Logs everything to console
- // Somehow let user know they have access
- // Clear all of the text-boxes
+      };
 
-// Create Firebase event for checking existing user info in the database 
-  // Store everything into a variable.
-  // Create a new account with email and pasword
-  //   Firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-  //   Handle Errors here.
-  //   var errorCode = error.code;
-  //   var errorMessage = error.message;
-  //   firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-  //   Handle Errors here.
-  //   var errorCode = error.code;
-  //   var errorMessage = error.message;
-  //   });
-  
-  
-  // Have a user sign out
-  //   firebase.auth().signOut().then(function() {
-  //   Sign-out successful.
-  //   }).catch(function(error) {
-  //    An error happened.
-  //   });
+      database.ref().push(character);
+     
+      // Log everything that's coming out of snapshot
+      console.log(character.characterName);
+            
+      // clear all of the input boxes
+      $("#characterSearch").val("");
+    });
+    
+    // When new user selects giphy image - update the image URL in database
+    // Assume we have images with an attribute of the character name - characterName
+    // assume we have an attribute of the URL on the image - imageURL
 
-  //JP
-	//based on user validation
-	//input in search bar (use charSearch varibale)
-	//pull data, name, affiliation and short bio
-	//
+    $("body").on("click",".imgURL", function(event) {
+	      // Don't refresh the page!
+	      event.preventDefault();
+	      //Get user input
+	     // Assumed that we have image with "characterName" and "imageURL" attributes
+		// When image is clicked, we use the "characterName" attribute to find our character
+		// Use the "imageURL" attribute to update our found character
+
+		var characterName = $(this).attr("characterName");
+		var imageURL = $(this).attr("imageURL")
+
+		database.ref("charaters/" + characterName).on("value", function(snapshot){
+			snapshot.ref.update({imageURL: imageURL});
+		})
+ 	});
+ // When new user selects card template - update the cardtemplate in database
+    // Assume we have images with an attribute of the character name - characterName
+    // assume we have an attribute of the URL on the image - cardTemplateURL
+ 	 $("body").on("click",".cardTemplateURL", function(event) {
+	      // Don't refresh the page!
+	      event.preventDefault();
+		// Assumed that we have image with "characterName" and "cardTemplateURL" attributes
+		// When image is clicked, we use the "charaterName" attribute to find our character
+		// Use the "cardTemplateURL" attribute to update our found character
+
+		var characterName = $(this).attr("characterName");
+		var cardTemplateURL = $(this).attr("cardTemplateURL")
+
+		database.ref("charaters/" + characterName).on("value", function(snapshot){
+			snapshot.ref.update({cardTemplateURL: cardTemplateURL});
+		})
+
 	
+    });
+
+ 	 // When new user selects SWAPIstats - update the swapistats in database
+    // Assume we have images with an attribute of the character name - characterName
+    // assume we have an attribute of the URL on the image - swapistatsURL
+ 	 $("body").on("click",".swapistatsURL", function(event) {
+	      // Don't refresh the page!
+	      event.preventDefault();
+		// Assumed that we have image with "characterName" and "swapiStateURL" attributes
+		// When image is clicked, we use the "charaterName" attribute to find our character
+		// Use the "swapiStateURL" attribute to update our found character
+
+		var characterName = $(this).attr("characterName");
+		var swapiStatsURL = $(this).attr("swapiStatsURL");
+
+		database.ref("charaters/" + characterName).on("value", function(snapshot){
+			snapshot.ref.update({swapiStatsURL: swapiStatsURL});
+		})
+
+	
+    });
+    
+    database.ref().on("child_added", function(childSnapshot, prevChildKey) {
+    	console.log(childSnapshot.val());
+
+	  	// Store everything into a variable.
+	  	var characterName = childSnapshot.val().characterName;
+	      
+		// user input info - get their function for how they are calling it
+		//getGiphyImages(characterName);
+		//createImagesTempages (characterName);
+
+		//Use characterName to get giphy images assume already done
+
+
+		
+		
+
+});
+  
+}
+  
+function displayThTable(divName) {
+	var myLocation = "#" + divName;
+	$(myLocation).html('<div class="row">');
+	for (var i = 1; i < 8; i++) {
+		$(myLocation).append(
+			'<div class="col-lg-2 col-md-3 col-sm-6 col-xs-12" id="' + i + '">#' + i + '</div>'
+		);
+	}
+	$(myLocation).append('</div>');
+}
+

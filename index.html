@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
@@ -12,34 +13,75 @@
 	<!-- Latest compiled and minified JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+	<!-- Link to JavaScript CDN -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
 	<!-- Load Firebase -->
 	<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+
+	<!-- Load Drop Effect library -->
+	<link rel="stylesheet" href="assets/javascript/jquery-ui-1.12.1.custom/jquery-ui.css">
+	<script src="assets/javascript/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
 
 	<!-- Load Font Awesome -->
 	<script src="https://use.fontawesome.com/e14e0f3537.js"></script>
 
 	<!-- add animate on scroll library on js -->
-	
-	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+	<!-- <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script> -->
 	<!-- add animate on scroll library in css -->
-
-	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+	<!-- <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet"> -->
 
 	<!-- Load local files -->
 	<link rel="stylesheet" type="text/css" href="assets/css/drawCards.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-	<script src="assets/javascript/vars.js"></script>
-	<script src="assets/javascript/functions.js"></script>
-	<script src="assets/javascript/functionsDrawCards.js"></script>
-	<script src="assets/javascript/app.js"></script>
 
-	<title></title>
+
+
+	<script src="assets/javascript/app.js"></script>
+	<script src="assets/javascript/vars.js"></script>
+	<script src="assets/javascript/functionsS.js"></script>
+	<script src="assets/javascript/functionsH.js"></script>
+	<script src="assets/javascript/functionsJ.js"></script>
+	<script src="assets/javascript/functionsV.js"></script>
+	<script src="assets/javascript/functionsDrawCards.js"></script>
+	<script src="assets/javascript/image-logic.js"></script>
+
+	<title>Star Wars Trading Cards</title>
+
 </head>
+
 <body>
-	<div class="container" id="mainDiv"></div>
+	<div class="container" id="mainDiv">
+		<div col="row">
+			<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" id="mainText">
+				<center><img src="assets/images/pageHeaderLogo.png" alt="Create Your Own Star Wars Trading Cards!" class="img img-responsive"></center>
+				<div class="container-float">
+					<div class="row">
+						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center" id="characterSearch">
+							<form class="form-inline">
+								<div>	
+									<label for="characterSearch">Search for a Star Wars character</label>
+								</div>
+								<div class="input-group">
+									<input type="text" class="form-control longWidth"  id="characterSearch" placeholder="Character Name">
+									<span class="input-group-btn"><button type="submit" id="submitBtn" class="btn btn-default">Submit</button></span>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" id="bodyLogo"><img src="assets/images/logo.png" alt="Artificial Rag Gnomes" class="img img-responsive" /></div>
+		</div>	
+	</div>
+
+	<div class="container" id="imageSelectDiv"></div>
+	<div class="container" id="templateSelectDiv"></div>
+	<div class="container" id="mainCardDisplayDiv"></div>
+	<div class="container" id="cardThDiv"></div>
 
 	<script type="text/javascript">
-	  drawMainPage("mainDiv");
+		displayThTable("cardThDiv");
 	</script>
 
 </body>

@@ -1,28 +1,32 @@
 function drawCollegeFront(divName) {
 	var myLocation = "#" + divName;
 	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
-	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateCollegeFront.png" height="400" width="285" />'
-	+				'<div class="templateElements" id="CollegeFrontIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
-	+				'<div class="templateElements text-uppercase" id="CollegeFrontName">Anakin Skywalker</div>'
+	+			'<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="templateImage"><img src="assets/images/templateCollegeFront.png" height="400" width="285" />'
+	+				'<div class="templateElements text-uppercase" id="CollegeFrontName">' + characterName + '</div>'
+	+			'</div>'
+	+			'<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="templateImageBack"><img src="assets/images/templateCollegeBack.png" height="400" width="285" />'
+	+				'<div class="templateElements text-uppercase" id="CollegeBackName">' + characterName + '</div>'
+	+				'<div class="templateElements" id="CollegeBackBio">' + swapistatsURL + '</div>'
+	+				'<div class="templateElements text-uppercase" id="CollegeBackImage"><img src="' + ImageUrl + '" class="img img-responsive" height="98px" width="70px" /></div>'
 	+			'</div>'
 	+		'</div>'
 	+	'</div>'
 	);
+	$("#templateImage").append('<img src="' + ImageUrl + '" class="myGiphyImg" height="400" width="285" />');
 }
 
+// UNUSED FUNCTION
 function drawCollegeBack(divName) {
 	var myLocation = "#" + divName;
-	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+	$(myLocation).append(
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
-	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateCollegeBack.png" height="400" width="285" />'
-	+				'<div class="templateElements" id="CollegeBackIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
-	+				'<div class="templateElements text-uppercase" id="CollegeBackName">Anakin Skywalker</div>'
-	+				'<div class="templateElements" id="CollegeBackBio">This is a blurb about Anakin Skywalker. He was a cool dude, until he wasn\'t anymore, until he was again. He turned into a whiny little idiot, then he became Darth Vader. He killed the Emperor to save his son Luke, so he can\'t be all bad!</div>'
-	+				'<div class="templateElements text-uppercase" id="CollegeBackAffiliation">Sith</div>'
-	+				'<div class="templateElements text-uppercase" id="CollegeBackImage"><img src="vader.png" class="img img-responsive" /></div>'
+	+			'<div class="col-lg-6" id="templateImageBack"><img src="assets/images/templateCollegeBack.png" height="400" width="285" />'
+	+				'<div class="templateElements text-uppercase" id="CollegeBackName">' + characterName + '</div>'
+	+				'<div class="templateElements" id="CollegeBackBio">' + swapistatsURL + '</div>'
+	+				'<div class="templateElements text-uppercase" id="CollegeBackImage"><img src="' + ImageUrl + '" class="img img-responsive" /></div>'
 	+			'</div>'
 	+		'</div>'
 	+	'</div>'
@@ -32,28 +36,33 @@ function drawCollegeBack(divName) {
 function drawSimpleFront(divName) {
 	var myLocation = "#" + divName;
 	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
-	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateSimpleFront.png" height="400" width="285" />'
-	+				'<div class="templateElements" id="SimpleFrontIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
-	+				'<div class="templateElements text-uppercase" id="SimpleFrontName">Anakin Skywalker</div>'
+	+			'<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="templateImage"><img src="assets/images/templateSimpleFront.png" height="400" width="285" />'
+	+				'<div class="templateElements text-uppercase" id="SimpleFrontName">' + characterName + '</div>'
+	+			'</div>'
+	+			'<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="templateImageBack"><img src="assets/images/templateSimpleBack.png" height="400" width="285" />'
+	+				'<div class="templateElements text-uppercase" id="SimpleBackName">' + characterName + '</div>'
+	+				'<div class="templateElements" id="SimpleBackBio">' + swapistatsURL + '</div>'
+	+				'<div class="templateElements text-uppercase" id="SimpleBackImage"><img src="' + ImageUrl + '" class="img img-responsive" height="165px" width="118px" /></div>'
 	+			'</div>'
 	+		'</div>'
 	+	'</div>'
 	);
+	$("#templateImage").append('<img src="' + ImageUrl + '" class="myGiphyImg" height="400" width="285" />');
+
 }
 
+// UNUSED FUNCTION
 function drawSimpleBack(divName) {
 	var myLocation = "#" + divName;
-	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+	$(myLocation).append(
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
-	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateSimpleBack.png" height="400" width="285" />'
-	+				'<div class="templateElements" id="SimpleBackIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
-	+				'<div class="templateElements text-uppercase" id="SimpleBackName">Anakin Skywalker</div>'
-	+				'<div class="templateElements" id="SimpleBackBio">This is a blurb about Anakin Skywalker. He was a cool dude, until he wasn\'t anymore, until he was again. He turned into a whiny little idiot, then he became Darth Vader. He killed the Emperor to save his son Luke, so he can\'t be all bad!</div>'
-	+				'<div class="templateElements text-uppercase" id="SimpleBackAffiliation">Sith</div>'
-	+				'<div class="templateElements text-uppercase" id="SimpleBackImage"><img src="vader.png" class="img img-responsive" /></div>'
+	+			'<div class="col-lg-6" id="templateImageBack"><img src="assets/images/templateSimpleBack.png" height="400" width="285" />'
+	+				'<div class="templateElements text-uppercase" id="SimpleBackName">' + characterName + '</div>'
+	+				'<div class="templateElements" id="SimpleBackBio">' + swapistatsURL + '</div>'
+	+				'<div class="templateElements text-uppercase" id="SimpleBackImage"><img src="' + ImageUrl + '" class="img img-responsive" height="165" width="118" /></div>'
 	+			'</div>'
 	+		'</div>'
 	+	'</div>'
@@ -63,28 +72,32 @@ function drawSimpleBack(divName) {
 function drawFutureFront(divName) {
 	var myLocation = "#" + divName;
 	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
-	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateFutureFront.png" height="400" width="285" />'
-	+				'<div class="templateElements" id="FutureFrontIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
-	+				'<div class="templateElements text-uppercase" id="FutureFrontName">Anakin Skywalker</div>'
+	+			'<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="templateImage"><img src="assets/images/templateFutureFront.png" height="400" width="285" />'
+	+				'<div class="templateElements text-uppercase" id="FutureFrontName">' + characterName + '</div>'
+	+			'</div>'
+	+			'<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" id="templateImageBack"><img src="assets/images/templateFutureBack.png" height="400" width="285" />'
+	+				'<div class="templateElements text-uppercase" id="FutureBackName">' + characterName + '</div>'
+	+				'<div class="templateElements" id="FutureBackBio">' + swapistatsURL + '</div>'
+	+				'<div class="templateElements text-uppercase" id="FutureBackImage"><img src="' + ImageUrl + '" class="img img-responsive" height="162" width="116" /></div>'
 	+			'</div>'
 	+		'</div>'
 	+	'</div>'
 	);
+	$("#templateImage").append('<img src="' + ImageUrl + '" class="myGiphyImg" height="400" width="285" />');
 }
 
+// UNUSED FUNCTION
 function drawFutureBack(divName) {
 	var myLocation = "#" + divName;
-	$(myLocation).html(
-		'<div class="container-float" id="templateArea">'
+	$(myLocation).append(
+		'<div class="container-float cardTemplateURL" id="templateArea">'
 	+		'<div class="row">'
-	+			'<div class="col-lg-12" id="templateImage"><img src="TradingCardGenerator/assets/images/templateFutureBack.png" height="400" width="285" />'
-	+				'<div class="templateElements" id="FutureBackIcon"><img src="iconRepublic.png" class="img img-responsive" /></div>'
-	+				'<div class="templateElements text-uppercase" id="FutureBackName">Anakin Skywalker</div>'
-	+				'<div class="templateElements" id="FutureBackBio">This is a blurb about Anakin Skywalker. He was a cool dude, until he wasn\'t anymore, until he was again. He turned into a whiny little idiot, then he became Darth Vader. He killed the Emperor to save his son Luke, so he can\'t be all bad!</div>'
-	+				'<div class="templateElements text-uppercase" id="FutureBackAffiliation">Sith</div>'
-	+				'<div class="templateElements text-uppercase" id="FutureBackImage"><img src="vader.png" class="img img-responsive" /></div>'
+	+			'<div class="col-lg-6" id="templateImageBack"><img src="assets/images/templateFutureBack.png" height="400" width="285" />'
+	+				'<div class="templateElements text-uppercase" id="FutureBackName">' + characterName + '</div>'
+	+				'<div class="templateElements" id="FutureBackBio">' + swapistatsURL + '</div>'
+	+				'<div class="templateElements text-uppercase" id="FutureBackImage"><img src="' + ImageUrl + '" class="img img-responsive" height="162" width="116" /></div>'
 	+			'</div>'
 	+		'</div>'
 	+	'</div>'
