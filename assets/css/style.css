@@ -12,6 +12,11 @@
 	margin: 20px;
 }
 
+.errorText {
+    color: #ff3333;
+    font-weight: bolder;
+}
+
 .cardTh {
 	margin-bottom: 25px;
 }
