@@ -29,13 +29,14 @@ $(document).ready(function() {
 
       var firstCharacter = results[0];
       console.log(firstCharacter);
-      drawGiphy(firstCharacter);
+      characterName = response.results[0].name;
+      drawGiphy(characterName);
 
       console.log(firstCharacter);
 
       // Save the new price in Firebase
-      database.ref().set(firstCharacter);
-      characterName = response.results[0].name;
+      //database.ref().set(firstCharacter);
+      
     });
     console.log("this is the one I want => if I am blank kill me", starPlayer);
   });
