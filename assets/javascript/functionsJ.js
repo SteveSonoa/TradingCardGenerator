@@ -31,6 +31,8 @@ $(document).ready(function() {
       console.log(firstCharacter);
       characterName = response.results[0].name;
       drawGiphy(characterName);
+      giphyClicked();
+      storeData();
 
       console.log(firstCharacter);
 

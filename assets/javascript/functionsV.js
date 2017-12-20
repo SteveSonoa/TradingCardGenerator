@@ -36,7 +36,7 @@ console.log("This is function giphyClicked...");
 
 
 //$('body').on('click', '.gifImg', function() {
-$(document).ready(function(){
+//$(document).ready(function(){
 $('.gifImg').on("click", function() {
 	var ImageUrl = $(this).attr("src");
 	console.log(ImageUrl);
@@ -44,7 +44,7 @@ $('.gifImg').on("click", function() {
 	displayTemplates();
 });
 
-});
+//});
 
 };
 
